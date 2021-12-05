@@ -14,7 +14,7 @@ Accepted formats for cover image:
 
 
 Copy the project in your folder and install the database dump in your PhpMyAdmin. Follow the instructions to complete the installation.
-
+⚠️If you are using a mac-OS or Linux replace the FFMPEG libraries from <a href="https://ffmpeg.org/download.html">here</a>
 ## Prerequisites
 
 -Apache Server
@@ -68,4 +68,4 @@ $filter="[0:a]showwaves=colors=blueviolet:s=1280x720:mode=cline,format=yuv420p[v
  $map="[v]";
  $cmd="$ff  -i $file_temp -filter_complex $filter -map $map -map 0:a -c:v libx264 -c:a copy $final_directory";
 ```
-![Screenshot](md-files/upload.png)
+![Screenshot](D:\laragon\www\mudeo\md-files\upload.png)
