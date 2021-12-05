@@ -30,7 +30,7 @@ Copy the project in your folder and install the database dump in your PhpMyAdmin
 Install LARAGON for an easy quickstart
 
 ## Routing
-The router app/libraries/core.php. The router accept 3 parameters
+The router app/libraries/core.php accept 3 parameters.
 ```
 call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
 ```
@@ -40,4 +40,5 @@ call_user_func_array([$this->currentController, $this->currentMethod], $this->pa
 Modify the app/config/config.php file according to your needs. You can use example.config.php file inside the same folder as an example based on my local settings.
 
 ## Upload Media
-The file that manage the uploading
+The file that manage the uploading is under app/controllers/medias/add. When a cover image is add the file is resized to the correct Ratio.
+Video size must be < 1gb. When the video is uploaded the FFMMPEG libraries first compress and resize the video to 1920x1080 px format. Video is renamed with an unique id and place into public/entities/videos and the link is added to bdd.entities.full_media.
