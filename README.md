@@ -70,3 +70,6 @@ $filter="[0:a]showwaves=colors=blueviolet:s=1280x720:mode=cline,format=yuv420p[v
  $cmd="$ff  -i $file_temp -filter_complex $filter -map $map -map 0:a -c:v libx264 -c:a copy $final_directory";
 ```
 ![Screenshot](md-files/upload.png)
+
+## License
+
