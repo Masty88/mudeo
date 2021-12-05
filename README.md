@@ -64,5 +64,8 @@ $cmd="$ff -i $file_temp  -s 1920:1080  $final_directory";
 ```
 When an Audio file is uploaded FFMPEG automatically create a mp4 video with audio wave. You can change the output format size, the wave color and format with FFMPEG for further information please read the complete documentation on FFMPEG <a href="https://ffmpeg.org/documentation.html">Documentation</a>
 ```
-$cmd="$ff -i $file_temp  -s 1920:1080  $final_directory";
+$filter="[0:a]showwaves=colors=blueviolet:s=1280x720:mode=cline,format=yuv420p[v]";
+ $map="[v]";
+ $cmd="$ff  -i $file_temp -filter_complex $filter -map $map -map 0:a -c:v libx264 -c:a copy $final_directory";
 ```
+![Screenshot](md-files/upload.png)
