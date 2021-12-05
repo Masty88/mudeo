@@ -2,7 +2,7 @@
 
 <section class="hero">
     <video  class="bk playIntro" muted loop>
-        <source src="<?=URLROOT?>/vid/bk.mp4" type="video/mp4">
+        <source src="<?=URLROOT?>/vid/bk.webm" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <audio id="audioIntro">
