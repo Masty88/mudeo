@@ -10,8 +10,9 @@ Accepted formats for medias:
 
 Accepted formats for cover image:
 
--***jpeg, jpg, webm, mp4***
+-***jpeg, jpg, png***
 
+![Screenshot](md-files/home.png)
 
 Copy the project in your folder and install the database dump in your PhpMyAdmin. Follow the instructions to complete the installation.
 ⚠️If you are using a mac-OS or Linux replace the FFMPEG libraries from <a href="https://ffmpeg.org/download.html">here</a>
