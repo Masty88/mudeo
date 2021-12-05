@@ -17,8 +17,8 @@ Accepted formats for cover image:
 ## Getting Started
 Copy the project in your folder and install the database dump in your PhpMyAdmin. Follow the instructions to complete the installation.
 ⚠️If you are using a mac-OS or Linux replace the FFMPEG libraries from <a href="https://ffmpeg.org/download.html">here</a>
-## Prerequisites
 
+## Prerequisites
 -Apache Server
 
 -PHP 5.6+
