@@ -509,7 +509,55 @@ if(uploadForm){
     })
 }
 
-//Page 404
+/*---Page show video---*/
+
+const showVideo= document.getElementsByClassName("showVideo");
+const previewOverlay=document.getElementsByClassName("previewOverlay")
+const afterViewOverlay=document.getElementsByClassName("afterViewOverlay")
+const id=document.getElementById("test");
+if(id){
+    console.log("here");
+    const idValue= document.getElementById("test").value;
+
+    function goBack() {
+        window.history.back();
+    }
+    function play(){
+        showVideo[0].play();
+        previewOverlay[0].style.cssText="display:none;";
+    }
+
+    function replay(){
+        location.reload();
+    }
+
+    showVideo[0].addEventListener("pause",(e)=>{
+        previewOverlay[0].style.cssText="display:block;";
+    })
+
+//When video end
+    showVideo[0].addEventListener('ended',(e)=>{
+        console.log("end");
+        previewOverlay[0].style.cssText="display:none;";
+        afterViewOverlay[0].style.cssText="display:block;";
+        let timeleft = 5;
+        if(showVideo[0].currentTime !== '0'){
+            let downloadTimer = setInterval(function(){
+                if(timeleft <= 0){
+                    console.log("ok");
+                    clearInterval(downloadTimer);
+                    document.getElementById("countdown").innerHTML = "Finished";
+                    document.location.href="http://mudeo.test/pages/show/" + idValue;
+
+                } else {
+                    document.getElementById("countdown").innerHTML = "Next video play in " + timeleft + " seconds";
+                }
+                timeleft -= 1;
+            }, 1000);
+        }
+    },false)
+}
+/*---Page 404---*/
 const errorPage=document.getElementById("404");
 if(errorPage){
     let c = document.querySelector('.c') /* canvas element */,
