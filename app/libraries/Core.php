@@ -1,6 +1,5 @@
 <?php
-
- /*
+ /**
   * App Core Class
   * Create URL & loads core controller
   * URL FORMAT -/controller/method/params
@@ -25,7 +24,7 @@ class Core{
             unset($url[0]);
 
         } else{
-            //TODO check if is a good way
+            http_response_code(404);
             $this->currentController= 'PageError';
         }
         //Require controller
@@ -43,6 +42,7 @@ class Core{
                 //unset url
                 unset($url[1]);
             }else{
+                http_response_code(404);
                 $this->currentMethod = 'error';
             }
         }

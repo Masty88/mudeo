@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * App Medias Class
+ * Manage all the Media Action
+ */
 class Medias extends Controller {
     public function __construct(){
         if(!isLoggedIn()){
@@ -20,6 +23,11 @@ class Medias extends Controller {
         ];
         $this->view('medias/index', $data);
     }
+    /**
+     * Upload media
+     * @throws $data if input are not fill
+     * @trhrows $sql exception if file not added
+     */
 
     public function add(){
         if ($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -254,9 +262,6 @@ class Medias extends Controller {
                     if($this->entitiesModel->addMedia($data)){
                         $data['success']= true;
                         flash('media_message', 'Media Added', "ml-5 has-text-white");
-                        // header('location: '.URLROOT.'/medias');
-                        //$this->view('medias/add', $data);
-
                     }else{
                         die('something went wrong');
                     }
@@ -286,12 +291,15 @@ class Medias extends Controller {
 
     }
 
-   /*
+    /**
     * Check media owner
     * Delete media from folder
     * Delete from bdd
+    * @param integer $id
+    * @throws medias to delete doesn't exist
     */
-    public function delete($id){
+
+    public function delete(int $id){
         $entity= $this->entitiesModel->getEntityById($id);
         $data=[
             'entity'=> $entity,
@@ -324,7 +332,16 @@ class Medias extends Controller {
         else{header('location: '.URLROOT.'/medias/index');}
     }
 
-    public function modify($id){
+    /**
+     * Check media owner
+     * Modify media from folder
+     * Modify media in bdd
+     * @param integer $id
+     * @throws $data if input are not fill
+     * @trhrows $sql exception if file not added
+     */
+
+    public function modify(int $id){
         $entity = $this->entitiesModel->getEntityById($id);
             if($id){
                 if($entity->id){
@@ -519,10 +536,14 @@ class Medias extends Controller {
             }else{
                 header('location: '.URLROOT.'/pages/index');
             }
-
     }
 
-    public function addToWatchList($id){
+    /**
+     * Add media to user watch list with fetch api
+     * @param integer $id
+     */
+
+    public function addToWatchList(int $id){
         $entity= $this->entitiesModel->getEntityById($id);
         $data=[
             'entity'=> $entity,
@@ -540,7 +561,12 @@ class Medias extends Controller {
         }
     }
 
-    public function removeFromWatchList($id){
+    /**
+     * Remove media to user watch list with fetch api
+     * @param integer $id
+     */
+
+    public function removeFromWatchList(int $id){
         $entity= $this->entitiesModel->getEntityById($id);
         $watch_list=$this->entitiesModel->getFromWatchList($_SESSION['user_id']);
         $data=[
@@ -557,7 +583,12 @@ class Medias extends Controller {
         else{header('location: '.URLROOT.'/medias/index');}
     }
 
-    public function addToLikedList($id){
+    /**
+     * Add media to user like list with fetch api
+     * @param integer $id
+     */
+
+    public function addToLikedList(int $id){
         $entity= $this->entitiesModel->getEntityById($id);
         $data=[
             'entity'=> $entity,
@@ -576,7 +607,12 @@ class Medias extends Controller {
         else{header('location: '.URLROOT.'/pages/index');}
     }
 
-    public function removeFromLikeList($id){
+    /**
+     * Remove media to user like list with fetch api
+     * @param integer $id
+     */
+
+    public function removeFromLikeList(int $id){
         $entity= $this->entitiesModel->getEntityById($id);
         $like_list=$this->entitiesModel->getFromLikeList($_SESSION['user_id']);
         $data=[
@@ -592,6 +628,10 @@ class Medias extends Controller {
         else{header('location: '.URLROOT.'/medias/index');}
     }
 
+    /**
+     * Hydrate array for user liked list
+     */
+
     protected function createArrayListLiked(){
         $watch_list=$this->entitiesModel->getFromLikeList($_SESSION['user_id']);
         $added=[];
@@ -601,6 +641,10 @@ class Medias extends Controller {
         }
     }
 
+    /**
+     * Hydrate array for user watch list
+     */
+
     protected function createArrayList(){
         $watch_list=$this->entitiesModel->getFromWatchList($_SESSION['user_id']);
         $added=[];
@@ -609,6 +653,11 @@ class Medias extends Controller {
             array_push($_SESSION['array_watch'],$add->entity_id);
         }
     }
+
+    /**
+     * Search in sql and show result page
+     * @throws $data if input are not fill
+     */
 
     public function search(){
         if ($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -647,10 +696,15 @@ class Medias extends Controller {
         }
     }
 
+    /**
+     * Redirect to page 404
+     */
+
     public function error(){
         $data=[
             'title'=> "BAD REQUEST",
         ];
+        http_response_code(404);
         $this->view("pages/404", $data);
     }
 
