@@ -1,11 +1,11 @@
 <?php require APPROOT.'/views/inc/headerfull.php';?>
-<input id="test" type="hidden" value="<?= $data['next_video']->id; ?>">
     <section class="hero is-large is-relative is-justify-content-center" style="height: 100vh" >
         <video class="showVideo" controls>
             <source src="<?= URLROOT?>/<?= $data['entity']->full_media; ?>" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="previewOverlay">
+            <input id="test" type="hidden" value="<?= $data['next_video']->id; ?>">
             <div class="mainDetailsShow is-flex is-flex-direction-column">
                 <div class="buttonsShow">
                 <div class="columns back">
@@ -99,9 +99,7 @@
     }
 
     function replay(){
-        afterViewOverlay[0].style.cssText="display:none;";
-        showVideo[0].currentTime = '0';
-        showVideo[0].play();
+        location.reload();
     }
 
     showVideo[0].addEventListener("pause",(e)=>{
