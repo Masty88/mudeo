@@ -1,7 +1,7 @@
 <?php require APPROOT.'/views/inc/headerfull.php';?>
 <?php //Todo add link to send a message to user ?>
     <section class="hero is-large is-relative is-justify-content-center" style="height: 100vh" >
-        <video class="showVideo" controls>
+        <video class="showVideo" controls controlsList="nodownload">
             <source src="<?= URLROOT?>/<?= $data['entity']->full_media; ?>" type="video/mp4">
             Your browser does not support the video tag.
         </video>

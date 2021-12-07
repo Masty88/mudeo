@@ -5,9 +5,7 @@ document.onreadystatechange = function () {
     //when document is complete
     if (document.readyState == "complete") {
         //add animation in order to translate the preloader
-        setTimeout(function (){
             preloader.style.cssText = "display:none";
-        },1000)
     }
 };
 
