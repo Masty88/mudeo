@@ -403,6 +403,11 @@ class Users extends Controller {
             else{header('location: '.URLROOT.'/users/index');}
     }
 
+    /**
+     * Function used to send reset token to user
+     * @throws Exception if mail not send
+     */
+
     public function sendToken()
     {
         if (!$_SESSION['logged']) {
