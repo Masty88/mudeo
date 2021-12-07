@@ -20,7 +20,8 @@ class Controller{
             require_once '../app/views/'.$view. '.php';
         }else{
             //view not exist
-            die('View does not exist');
+            http_response_code('404');
+           require_once '../app/views/pages/404.php';
         }
     }
 

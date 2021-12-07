@@ -25,7 +25,7 @@ class Medias extends Controller {
     }
     /**
      * Upload media
-     * @throws $data if input are not fill
+     * @throws data if input are not fill
      * @trhrows $sql exception if file not added
      */
 
@@ -263,7 +263,8 @@ class Medias extends Controller {
                         $data['success']= true;
                         flash('media_message', 'Media Added', "ml-5 has-text-white");
                     }else{
-                        die('something went wrong');
+                        flash('media_message', 'something went wrong ',"has-text-white ml-5");
+                        header('location: '.URLROOT.'/medias/index');
                     }
                 }else{
                     flash('media_error', 'You have already reach the maximum upload allowed!','has-text-white mb-6');
@@ -337,8 +338,7 @@ class Medias extends Controller {
      * Modify media from folder
      * Modify media in bdd
      * @param integer $id
-     * @throws $data if input are not fill
-     * @trhrows $sql exception if file not added
+     * * @throws Exception if file not add
      */
 
     public function modify(int $id){
@@ -505,7 +505,8 @@ class Medias extends Controller {
                                         flash('media_message', 'Media modify',"has-text-white ml-5");
                                         header('location: '.URLROOT.'/medias/index');
                                     }else{
-                                        die('something went wrong');
+                                        flash('media_message', 'something went wrong ',"has-text-white ml-5");
+                                        header('location: '.URLROOT.'/medias/index');
                                     }
                                 }
                                 else{
@@ -656,7 +657,7 @@ class Medias extends Controller {
 
     /**
      * Search in sql and show result page
-     * @throws $data if input are not fill
+     * @throws Exception
      */
 
     public function search(){

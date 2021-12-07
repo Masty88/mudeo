@@ -78,7 +78,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Medias\u003A\u003AaddToWatchList\u0028\u0029",
             "name": "addToWatchList",
-            "summary": "Add\u0020media\u0020to\u0020user\u0020watch\u0020list\u0020with\u0020fetc\u0020api",
+            "summary": "Add\u0020media\u0020to\u0020user\u0020watch\u0020list\u0020with\u0020fetch\u0020api",
             "url": "classes/Medias.html#method_addToWatchList"
         },                {
             "fqsen": "\\Medias\u003A\u003AremoveFromWatchList\u0028\u0029",

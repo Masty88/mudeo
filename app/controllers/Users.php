@@ -1,5 +1,17 @@
 <?php
+/**
+ * App Medias Class
+ * Manage all the Users Action
+ */
+
 class Users extends Controller {
+
+    /**
+     * User constructor
+     * Connection to sql model
+     * Automatic connection if cookie exist
+     */
+
     public function __construct(){
     $this->userModel = $this->model('User');
     $this->entitiesModel = $this->model('Entities');
@@ -9,8 +21,13 @@ class Users extends Controller {
     }
 
     public function index(){
-            header('location: '.URLROOT.'/users/login');
+        header('location: '.URLROOT.'/users/login');
     }
+
+    /**
+     * Function used to register a user.
+     * @throws Exception if user not registered
+     */
 
     public function register(){
         //Check for POST
@@ -95,8 +112,6 @@ class Users extends Controller {
                     if($this->userModel->register($data)){
                         flash('register_success', 'You are now registered');
                         header('location: '.URLROOT.'/users/login');
-                    }else{
-                        die("Error");
                     }
                 }else{
                     //Load view with errors
@@ -123,6 +138,10 @@ class Users extends Controller {
             header('location: '.URLROOT.'/pages/index');
         }
     }
+
+    /**
+     * Function used to login a user.
+     */
 
     public function login(){
         //Check for POST
@@ -197,6 +216,12 @@ class Users extends Controller {
 
     }
 
+    /**
+     * Function used to modify user information.
+     * Function used to delete user account.
+     * * @throws Exception if user account not delete or modify
+     */
+
     public function member(){
         $account_info=$this->userModel->getFromUser($_SESSION['user_id']);
 
@@ -249,7 +274,8 @@ class Users extends Controller {
                         flash('modify_success', 'Your data are been modified');
                         header('location: '.URLROOT.'/users/member');
                     }else{
-                        die("Error");
+                        flash('modify_success', 'shomething went wrong');
+                        header('location: '.URLROOT.'/users/member');
                     }
                 }else{
                     //Load view with errors
@@ -270,6 +296,11 @@ class Users extends Controller {
         }
 
     }
+
+    /**
+     * Function used to modify user information.
+     * @throws Exception if user account not modify
+     */
 
     public function modifyAccount(){
         if(!isLoggedIn()){
@@ -341,6 +372,13 @@ class Users extends Controller {
 
     }
 
+    /**
+     * Function used to delete user information.
+     * Function used to delete user account.
+     * @param int
+     * @throws Exception if user account not delete
+     */
+
     public function deleteAcc(){
 
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -358,7 +396,6 @@ class Users extends Controller {
                 }
             }
             else{header('location: '.URLROOT.'/users/index');}
-
     }
 
     public function sendToken()
@@ -417,7 +454,6 @@ class Users extends Controller {
 
                     }
                     catch(Exception $err){
-                        echo " here";
                         echo $err;
                     }
                 }else{
@@ -457,8 +493,6 @@ class Users extends Controller {
                             'get_id'=>$id,
                         ];
 
-                        echo $data['user_id'];
-
                         if(empty($password)){
                             $data['password_err']= "Please enter the password";
                         }elseif (strlen($data['password']) < 6){
@@ -489,8 +523,6 @@ class Users extends Controller {
                             }
                         }else{
                             //Load view with errors
-                            echo " here  ";
-                            echo $id;
                             $this->view('users/reset', $data);
                         }
 
@@ -501,7 +533,6 @@ class Users extends Controller {
                             'user_id'=>$user_id,
                             'get_id'=>$id,
                         ];
-                        echo $id;
                         $this->view('users/reset', $data);
                     }
                 }
@@ -516,7 +547,7 @@ class Users extends Controller {
             }
     }
 
-    public function checkForExpiringToken($time): bool
+    protected function checkForExpiringToken($time): bool
     {
         $startdate=strtotime($time);
         $expire_date =  strtotime( "+ 1 hour",$startdate);
@@ -547,11 +578,9 @@ class Users extends Controller {
     $_SESSION['email'] = $user->email;
     $_SESSION['name'] = $user->name;
     header('location: '.URLROOT.'/pages/index');
-
     }
 
     public function createUserToken(){
-        //$this->userModel->stayConnected($_SESSION['user_id']);
         $this->userModel->stayConnectedTwo($_SESSION['user_id']);
     }
 
