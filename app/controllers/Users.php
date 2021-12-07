@@ -5,6 +5,14 @@
  */
 
 class Users extends Controller {
+    /**
+     * @var mixed
+     */
+    private $userModel;
+    /**
+     * @var mixed
+     */
+    private $entitiesModel;
 
     /**
      * User constructor
@@ -171,12 +179,9 @@ class Users extends Controller {
                 if(empty($email)){
                     $data['email_err']= "Please enter the email";
                 }
-                if($this->userModel->findUserByEmail($email)){
-
-                }else{
+                if(!$this->userModel->findUserByEmail($email)){
                     $data['email_err']="No user found";
                 }
-
 
                 if(empty($password)){
                     $data['password_err']= "Please enter the password";
@@ -429,7 +434,7 @@ class Users extends Controller {
                     $token=$this->userModel->recoverResetToken($userId)->recover_token;
                     $mail= new PHPMailer\PHPMailer\PHPMailer(true);
                     try{
-                        $html='<h2 class="has-text-warning">This token is valable 24h</h2>
+                        $html='<h2 class="has-text-warning">This token is valable 1h</h2>
                         <a href="mudeo.test/users/reset/'.$token.'">Reset</a>';
                         $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;                     //Enable verbose debug output
                         $mail->isSMTP();                                            //Send using SMTP
@@ -547,7 +552,7 @@ class Users extends Controller {
             }
     }
 
-    protected function checkForExpiringToken($time): bool
+    private function checkForExpiringToken($time): bool
     {
         $startdate=strtotime($time);
         $expire_date =  strtotime( "+ 1 hour",$startdate);
