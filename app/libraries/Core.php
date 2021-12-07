@@ -28,7 +28,7 @@ class Core
         //Require controller
         require_once '../app/controllers/' . $this->currentController . '.php';
 
-        //Instace controller class
+        //Instance controller class
         $this->currentController = new $this->currentController();
 
         //Check for second part of URL
