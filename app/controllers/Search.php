@@ -18,9 +18,11 @@ class Search extends Controller
     public function index(){
         header('location: ' . URLROOT . '/pages/index');
     }
+
     /**
-     * Hydrate array for user liked list
+     * Search in sql
      */
+
     public function search()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -46,6 +48,10 @@ class Search extends Controller
             header('location: ' . URLROOT . '/medias/index');
         }
     }
+
+    /**
+     * Display search result
+     */
 
     public function viewSearch()
     {

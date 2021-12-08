@@ -41,7 +41,7 @@
                                     <?php endif;?>
                                 </form>
                             </div>
-                            <div class="column is-5"></div>
+                            <div class="column is-4"></div>
                             <div class="column">
                                 <?php if(!isLiked($search_list->id)):?>
                                     <form class="likedList"  method="post">
