@@ -343,9 +343,7 @@ class Users extends Controller
                     try {
                         $html =
                             '<h2 class="has-text-warning">This token is valable 1h</h2>
-                        <a href="mudeo.test/users/reset/' .
-                            $token .
-                            '">Reset</a>';
+                        <a href="mudeo.test/users/reset/' . $token . '">Reset</a>';
                         $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER; //Enable verbose debug output
                         $mail->isSMTP(); //Send using SMTP
                         $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
@@ -365,6 +363,7 @@ class Users extends Controller
                         $mail->AltBody = "test";
 
                         $mail->send();
+                        flash('register_success',"token sent verify your email");
                         header('location: ' . URLROOT . '/users/login');
                     } catch (Exception $err) {
                         echo $err;
@@ -386,13 +385,13 @@ class Users extends Controller
 
     /**
      * Function used to send reset user password
-     * @param int $id
+     * @param $token
      * @throws Exception if password not send to sql
      */
-    public function reset(int $id)
+    public function reset($token)
     {
-        $user_id = $this->userModel->recoverResetTokenGet($id)->user_id;
-        $creation_time = $this->userModel->recoverResetTokenGet($id)->created_at;
+        $user_id = $this->userModel->recoverResetTokenGet($token)->user_id;
+        $creation_time = $this->userModel->recoverResetTokenGet($token)->created_at;
 
         if (!$_SESSION['logged']) {
             //If not expired
@@ -406,7 +405,7 @@ class Users extends Controller
                         'password_err' => "",
                         'confirm_password_err' => "",
                         'user_id' => $user_id,
-                        'get_id' => $id,
+                        'get_id' => $token,
                     ];
 
                     if (empty($password)) {
@@ -429,11 +428,11 @@ class Users extends Controller
                         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                         //Register
                         if ($this->userModel->modifyPassword($data)) {
-                            $this->userModel->removeToken($id);
+                            $this->userModel->removeToken($token);
                             flash('register_success', 'Your password has been modified');
                             header('location: ' . URLROOT . '/users/login');
                         } else {
-                            $this->userModel->removeToken($id);
+                            $this->userModel->removeToken($token);
                             flash('register_success', 'something went wrong');
                             header('location: ' . URLROOT . '/users/login');
                         }
@@ -446,12 +445,12 @@ class Users extends Controller
                         'password_err' => "",
                         'confirm_password_err' => "",
                         'user_id' => $user_id,
-                        'get_id' => $id,
+                        'get_id' => $token,
                     ];
                     $this->view('users/reset', $data);
                 }
             } else {
-                $this->userModel->removeToken($id);
+                $this->userModel->removeToken($token);
                 flash('expired_token', "Token has expired please ask a new one", "has-text-white");
                 header('location: ' . URLROOT . '/users/login');
             }

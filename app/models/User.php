@@ -29,11 +29,29 @@ class User
     }
 
     /**
+     * @param $email
+     * @return false
+     */
+    public function findIdUserByEmail($email): bool
+    {
+        $this->db->query('SELECT * FROM users WHERE email = :email');
+        $this->db->bind(':email', $email);
+
+        $row = $this->db->single();
+
+        if ($this->db->rowCount() > 0) {
+            return $row;
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Insert data in DB
      * @param $data
      * @return bool
      */
-    public function register($data)
+    public function register($data): bool
     {
         $this->db->query("INSERT INTO users (name,email,password) VALUES (:name, :email , :password)");
         $this->db->bind(':name', $data['name']);
@@ -109,7 +127,7 @@ class User
     }
 
     /**
-     * Recover token
+     * Recover cookie
      */
     public function recoverToken()
     {
@@ -142,7 +160,8 @@ class User
      * @param $data
      * @return bool
      */
-    public function modifyAcc($data){
+    public function modifyAcc($data): bool
+    {
         $this->db->query('UPDATE users SET name = :name, email = :email WHERE id= :id');
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':email', $data['email']);
@@ -159,7 +178,8 @@ class User
      * @param $id
      * @return bool
      */
-    public function deleteAcc($id){
+    public function deleteAcc($id): bool
+    {
         $this->db->query('DELETE FROM users WHERE id = :id');
         $this->db->bind(':id', $id);
         if($this->db->execute()){
@@ -175,7 +195,8 @@ class User
      * @return bool
      * @throws Exception
      */
-    public function createResetToken($userId){
+    public function createResetToken($userId): bool
+    {
         $token = bin2hex(random_bytes(16));
 
         $this->db->query("INSERT INTO users_reset (user_id,recover_token) VALUES (:userId,:token)");
@@ -226,7 +247,8 @@ class User
      * @param $data
      * @return bool
      */
-    public function modifyPassword($data){
+    public function modifyPassword($data): bool
+    {
         $this->db->query('UPDATE users SET password = :password WHERE id= :id');
         $this->db->bind(':password', $data['password']);
         $this->db->bind(':id', $data['user_id']);
