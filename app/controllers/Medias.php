@@ -38,10 +38,7 @@ class Medias extends Controller
 
     /**
      * Upload media
-     * @throws data if input are not fill
-     * @trhrows $sql exception if file not added
      */
-
     public function add()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -288,7 +285,6 @@ class Medias extends Controller
      * @param integer $id
      * @throws medias to delete doesn't exist
      */
-
     public function delete(int $id)
     {
         $entity = $this->entitiesModel->getEntityById($id);
@@ -331,7 +327,6 @@ class Medias extends Controller
      * @param integer $id
      * * @throws Exception if file not add
      */
-
     public function modify(int $id)
     {
         $entity = $this->entitiesModel->getEntityById($id);
@@ -523,7 +518,6 @@ class Medias extends Controller
      * Add media to user watch list with fetch api
      * @param integer $id
      */
-
     public function addToWatchList(int $id)
     {
         $entity = $this->entitiesModel->getEntityById($id);
@@ -545,9 +539,8 @@ class Medias extends Controller
 
     /**
      * Remove media to user watch list with fetch api
-     * @param integer $id
+     * @param $id
      */
-
     public function removeFromWatchList(int $id)
     {
         $entity = $this->entitiesModel->getEntityById($id);
@@ -571,7 +564,6 @@ class Medias extends Controller
      * Add media to user like list with fetch api
      * @param integer $id
      */
-
     public function addToLikedList(int $id)
     {
         $entity = $this->entitiesModel->getEntityById($id);
@@ -597,7 +589,6 @@ class Medias extends Controller
      * Remove media to user like list with fetch api
      * @param integer $id
      */
-
     public function removeFromLikeList(int $id)
     {
         $entity = $this->entitiesModel->getEntityById($id);
@@ -619,7 +610,6 @@ class Medias extends Controller
     /**
      * Hydrate array for user liked list
      */
-
     protected function createArrayListLiked()
     {
         $watch_list = $this->entitiesModel->getFromLikeList($_SESSION['user_id']);
@@ -632,7 +622,6 @@ class Medias extends Controller
     /**
      * Hydrate array for user watch list
      */
-
     protected function createArrayList()
     {
         $watch_list = $this->entitiesModel->getFromWatchList($_SESSION['user_id']);
@@ -645,7 +634,6 @@ class Medias extends Controller
     /**
      * Redirect to page 404
      */
-
     public function error()
     {
         $data = [

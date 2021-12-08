@@ -13,7 +13,6 @@
                             <div class="columns is-centered">
                                 <div class="column">
                                     <form enctype="multipart/form-data" id="uploadForm" class="box" method="post">
-                                          <!--action="/*urlroot*//medias/add"-->
 
                                         <h1 class="title">UPLOAD MEDIA</h1>
                                         <!--Title-->

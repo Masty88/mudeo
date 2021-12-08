@@ -14,7 +14,7 @@ class User
      * @param $email
      * @return bool
      */
-    public function findUserByEmail($email)
+    public function findUserByEmail($email): bool
     {
         $this->db->query('SELECT * FROM users WHERE email = :email');
         $this->db->bind(':email', $email);
@@ -108,6 +108,9 @@ class User
 
     }
 
+    /**
+     * Recover token
+     */
     public function recoverToken()
     {
         $this->db->query('SELECT  * FROM connections_user WHERE remembertoken = :token');

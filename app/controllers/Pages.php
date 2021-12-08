@@ -29,10 +29,9 @@ class Pages extends Controller {
 
     /**
      * Show media and count unique view for video
-     * @param int $id
+     * @param $id
      */
-
-    public function show(int $id){
+    public function show($id){
         $entity = $this->entitiesModel->getEntityById($id);
         $next_video=$this->entitiesModel->getRandomEntity();
         $data = [
@@ -60,7 +59,6 @@ class Pages extends Controller {
     /**
      * Show page about
      */
-
     public function about(){
         $data=[
             'title'=> "About Us",
@@ -72,7 +70,6 @@ class Pages extends Controller {
     /**
      * Hydrate array for user watch list
      */
-
     protected function createArrayList(){
         $watch_list=$this->entitiesModel->getFromWatchList($_SESSION['user_id']);
         $added=[];
@@ -85,7 +82,6 @@ class Pages extends Controller {
     /**
      * Hydrate array for user liked list
      */
-
     protected function createArrayListLiked(){
         $watch_list=$this->entitiesModel->getFromLikeList($_SESSION['user_id']);
         $_SESSION['array_like']=[];
@@ -97,7 +93,6 @@ class Pages extends Controller {
     /**
      * No method found
      */
-
     public function error(){
         $data=[
             'title'=> "BAD REQUEST",
