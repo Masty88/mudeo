@@ -35,6 +35,7 @@ class Medias extends Controller
         ];
         $this->view('medias/index', $data);
     }
+
     /**
      * Upload media
      * @throws data if input are not fill

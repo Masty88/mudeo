@@ -27,7 +27,12 @@ class Pages extends Controller {
 
     }
 
-    public function show($id){
+    /**
+     * Show media and count unique view for video
+     * @param int $id
+     */
+
+    public function show(int $id){
         $entity = $this->entitiesModel->getEntityById($id);
         $next_video=$this->entitiesModel->getRandomEntity();
         $data = [
@@ -51,6 +56,10 @@ class Pages extends Controller {
             header('location: '.URLROOT.'/pages/index');
         }
     }
+
+    /**
+     * Show page about
+     */
 
     public function about(){
         $data=[

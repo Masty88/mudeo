@@ -14,6 +14,13 @@ class Search extends Controller
     $this->createArrayListLiked();
     $this->createArrayList();
 }
+
+    public function index(){
+        header('location: ' . URLROOT . '/pages/index');
+    }
+    /**
+     * Hydrate array for user liked list
+     */
     public function search()
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -52,98 +59,6 @@ class Search extends Controller
             flash('search_message', "We found" . " " . count($data['search_list']), "has-text-white");
         }
         $this->view("search/search", $data);
-    }
-
-    public function addToWatchList(int $id)
-    {
-        $entity = $this->entitiesModel->getEntityById($id);
-        $data = [
-            'entity' => $entity,
-            'entityId' => $entity->id,
-            'userId' => $_SESSION['user_id'],
-            'liked' => "",
-        ];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if ($this->entitiesModel->preventDoubleInWatchList($data)) {
-                $data['liked'] = true;
-            } else {
-                echo json_encode($data);
-                $this->entitiesModel->addToWatchList($data);
-            }
-        }
-    }
-
-    /**
-     * Remove media to user watch list with fetch api
-     * @param integer $id
-     */
-
-    public function removeFromWatchList(int $id)
-    {
-        $entity = $this->entitiesModel->getEntityById($id);
-        $watch_list = $this->entitiesModel->getFromWatchList($_SESSION['user_id']);
-        $data = [
-            'entity' => $entity,
-            'watch_list' => $watch_list,
-        ];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if ($entity->id) {
-                $this->entitiesModel->removeFromWatchList($id);
-                flash('media_message', 'Media delete', 'ml-5 has-text-white');
-                header('location: ' . URLROOT . '/medias/index');
-            }
-        } else {
-            header('location: ' . URLROOT . '/medias/index');
-        }
-    }
-
-    /**
-     * Add media to user like list with fetch api
-     * @param integer $id
-     */
-
-    public function addToLikedList(int $id)
-    {
-        $entity = $this->entitiesModel->getEntityById($id);
-        $data = [
-            'entity' => $entity,
-            'entityId' => $entity->id,
-            'userId' => $_SESSION['user_id'],
-            'liked' => "",
-        ];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if ($this->entitiesModel->preventDoubleInLikeList($data)) {
-                $data['liked'] = true;
-            } else {
-                echo json_encode($data);
-                $this->entitiesModel->addToLikeList($data);
-            }
-        } else {
-            header('location: ' . URLROOT . '/pages/index');
-        }
-    }
-
-    /**
-     * Remove media to user like list with fetch api
-     * @param integer $id
-     */
-
-    public function removeFromLikeList(int $id)
-    {
-        $entity = $this->entitiesModel->getEntityById($id);
-        $like_list = $this->entitiesModel->getFromLikeList($_SESSION['user_id']);
-        $data = [
-            'entity' => $entity,
-            'like_list' => $like_list,
-        ];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if ($entity->id) {
-                echo json_encode($data);
-                $this->entitiesModel->removeFromLikeList($id);
-            }
-        } else {
-            header('location: ' . URLROOT . '/medias/index');
-        }
     }
 
     /**
