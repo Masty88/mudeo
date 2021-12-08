@@ -9,6 +9,11 @@ class User
         $this->db = new Database;
     }
 
+    /**
+     * Verify if user is already in DB
+     * @param $email
+     * @return bool
+     */
     public function findUserByEmail($email)
     {
         $this->db->query('SELECT * FROM users WHERE email = :email');
@@ -23,20 +28,11 @@ class User
         }
     }
 
-    public function findIdUserByEmail($email)
-    {
-        $this->db->query('SELECT * FROM users WHERE email = :email');
-        $this->db->bind(':email', $email);
-
-        $row = $this->db->single();
-
-        if ($this->db->rowCount() > 0) {
-            return $row;
-        } else {
-            return false;
-        }
-    }
-
+    /**
+     * Insert data in DB
+     * @param $data
+     * @return bool
+     */
     public function register($data)
     {
         $this->db->query("INSERT INTO users (name,email,password) VALUES (:name, :email , :password)");
@@ -51,6 +47,12 @@ class User
         }
     }
 
+    /**
+     * Log the user
+     * @param $email
+     * @param $password
+     * @return false|void
+     */
     public function login($email, $password)
     {
         $req=$this->db->query('SELECT * FROM users WHERE email = :email');
@@ -69,6 +71,10 @@ class User
 
     }
 
+    /**
+     * Create the cookie for the connection
+     * @param $userid
+     */
     public function stayConnected($userid)
     {
 
@@ -84,6 +90,9 @@ class User
 
     }
 
+    /**
+     * @param $userid
+     */
     public function stayConnectedTwo($userid)
     {
 
@@ -113,6 +122,11 @@ class User
         }
     }
 
+    /**
+     * Return data from user table
+     * @param $id
+     * @return mixed
+     */
     public function getFromUser($id){
         $this->db->query("SELECT * FROM users WHERE id = :id");
         $this->db->bind(':id', $id);
@@ -120,6 +134,11 @@ class User
         return $result;
     }
 
+    /**
+     * Modify user data in Db
+     * @param $data
+     * @return bool
+     */
     public function modifyAcc($data){
         $this->db->query('UPDATE users SET name = :name, email = :email WHERE id= :id');
         $this->db->bind(':name', $data['name']);
@@ -132,6 +151,11 @@ class User
         }
     }
 
+    /**
+     * Delete Account
+     * @param $id
+     * @return bool
+     */
     public function deleteAcc($id){
         $this->db->query('DELETE FROM users WHERE id = :id');
         $this->db->bind(':id', $id);
@@ -142,6 +166,12 @@ class User
         }
     }
 
+    /**
+     * Create token to reset the password
+     * @param $userId
+     * @return bool
+     * @throws Exception
+     */
     public function createResetToken($userId){
         $token = bin2hex(random_bytes(16));
 
@@ -155,6 +185,11 @@ class User
         }
     }
 
+    /**
+     * Recover user token for password reset
+     * @param $userId
+     * @return mixed
+     */
     public function recoverResetToken($userId){
         $this->db->query('SELECT  * FROM users_reset WHERE user_id = :userId');
         $this->db->bind(':userId', $userId);
@@ -162,6 +197,10 @@ class User
         return $row;
     }
 
+    /**
+     * @param $token
+     * @return mixed
+     */
     public function recoverResetTokenGet($token){
         $this->db->query('SELECT  * FROM users_reset WHERE recover_token = :token');
         $this->db->bind(':token', $token);
@@ -169,12 +208,21 @@ class User
         return $row;
     }
 
+    /**
+     * Remove reset toke after use or if is expired
+     * @param $id
+     */
     public function removeToken($id){
         $this->db->query('DELETE FROM users_reset WHERE recover_token = :id');
         $this->db->bind(':id', $id);
         $this->db->execute();
     }
 
+    /**
+     * Modify password in DB
+     * @param $data
+     * @return bool
+     */
     public function modifyPassword($data){
         $this->db->query('UPDATE users SET password = :password WHERE id= :id');
         $this->db->bind(':password', $data['password']);
@@ -186,6 +234,9 @@ class User
         }
     }
 
+    /**
+     * Remove cookie logged from DB
+     */
     public function removeCookie(){
         $this->db->query('DELETE FROM connections_user WHERE remembertoken = :token');
         $this->db->bind(':token', $_COOKIE['logged']);
