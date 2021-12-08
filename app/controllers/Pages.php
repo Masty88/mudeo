@@ -77,20 +77,6 @@ class Pages extends Controller {
         }
     }
 
-    public function viewSearch(){
-        $search_list= $this->entitiesModel->search( $_SESSION['query']);
-        $data=[
-            'search_list'=>$search_list
-        ];
-            if(empty($data['search_list'])){
-                flash('search_message', 'Nothing to show');
-                $this->view("medias/search", $data);
-            }else{
-                flash('search_message',"We found"." ". count($data['search_list']) , "has-text-white");
-                $this->view("medias/search", $data);
-            }
-    }
-
     public function error(){
         $data=[
             'title'=> "BAD REQUEST",

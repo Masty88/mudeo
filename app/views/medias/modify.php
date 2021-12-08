@@ -11,8 +11,8 @@
                             <div class="container ">
                                 <div class="columns is-centered">
                                     <div class="column">
-                                        <form enctype="multipart/form-data"
-                                              action="<?= URLROOT; ?>/medias/modify/<?= $data['entity']->id ?>" class="box" method="post">
+                                        <form enctype="multipart/form-data" action="<?= URLROOT; ?>/medias/modify/<?= $data['entity']->id ?>" class="box" method="post">
+
 
                                             <h1 class="title">MODIFY MEDIA</h1>
                                             <!--Title-->
@@ -66,7 +66,7 @@
 
                                             <div class="field">
                                                 <figure class="image">
-                                                    <img src="<?= URLROOT?>/<?= $data['entity']->thumbnail; ?>">
+                                                    <img src="<?= URLROOT?>/<?= $data['entity']->thumbnail; ?>" alt="thumb">
                                                 </figure>
                                             </div>
 
@@ -94,19 +94,25 @@
 
                                             <script>
                                                 const fileInput = document.querySelector('#file-js input[type=file]');
-                                                fileInput.onchange = () => {
-                                                    if (fileInput.files.length > 0) {
-                                                        const fileName = document.querySelector('#file-js .file-name');
-                                                        fileName.textContent = fileInput.files[0].name;
+                                                if(fileInput){
+                                                    fileInput.onchange = () => {
+                                                        if (fileInput.files.length > 0) {
+                                                            const fileName = document.querySelector('#file-js .file-name');
+                                                            fileName.textContent = fileInput.files[0].name;
+                                                        }
                                                     }
                                                 }
+
                                                 const mediaInput = document.querySelector('#file-js-2 input[type=file]');
-                                                mediaInput.onchange = () => {
-                                                    if (mediaInput.files.length > 0) {
-                                                        const fileName = document.querySelector('#file-js-2 .file-name');
-                                                        fileName.textContent = mediaInput.files[0].name;
+                                                if(mediaInput){
+                                                    mediaInput.onchange = () => {
+                                                        if (mediaInput.files.length > 0) {
+                                                            const fileName = document.querySelector('#file-js-2 .file-name');
+                                                            fileName.textContent = mediaInput.files[0].name;
+                                                        }
                                                     }
                                                 }
+
                                             </script>
 
 

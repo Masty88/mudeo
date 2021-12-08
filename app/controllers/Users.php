@@ -483,7 +483,13 @@ class Users extends Controller {
         }
     }
 
-    public function reset($id){
+    /**
+     * Function used to send reset user password
+     * @param int $id
+     * @throws Exception if password not send to sql
+     */
+
+    public function reset(int $id){
 
         $user_id=$this->userModel->recoverResetTokenGet($id)->user_id;
         $creation_time=$this->userModel->recoverResetTokenGet($id)->created_at;

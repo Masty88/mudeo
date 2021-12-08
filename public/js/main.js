@@ -338,7 +338,7 @@ if(searchEngine){
          e.preventDefault();
         const body = new FormData(searchEngine);
         /*-------fetch send data from php to js-------*/
-        const req = await fetch('/medias/search', {
+        const req = await fetch('/search/search', {
             method: 'POST',
             headers:{
                 'Accept' : 'application/json'
@@ -348,8 +348,9 @@ if(searchEngine){
         const res = await req.json();
         if (!res.success) {
             inputSearch.classList.add("is-danger");
-        }else{
-            window.location.assign('viewsearch');
+        }
+        else{
+            window.location.href='/search/viewsearch';
         }
     })
 }
@@ -514,7 +515,6 @@ const previewOverlay=document.getElementsByClassName("previewOverlay")
 const afterViewOverlay=document.getElementsByClassName("afterViewOverlay")
 const id=document.getElementById("test");
 if(id){
-    console.log("here");
     const idValue= document.getElementById("test").value;
 
     function goBack() {

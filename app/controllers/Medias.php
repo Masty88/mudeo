@@ -23,6 +23,7 @@ class Medias extends Controller
         $this->createArrayListLiked();
         $this->createArrayList();
     }
+
     public function index()
     {
         $list = $this->entitiesModel->getEntitiesForUser($_SESSION['user_id']);
@@ -337,7 +338,6 @@ class Medias extends Controller
             if ($entity->id) {
                 if ($_SESSION['user_id'] === $entity->userId) {
                     if ($_SERVER['REQUEST_METHOD'] == "POST") {
-                        echo "here";
                         $data = [
                             'entity' => $entity,
                             'entityId' => $entity->id,
@@ -639,51 +639,6 @@ class Medias extends Controller
         foreach ($watch_list as $add) {
             array_push($_SESSION['array_watch'], $add->entity_id);
         }
-    }
-
-    /**
-     * Search in sql and show result page
-     * @throws Exception
-     */
-
-    public function search()
-    {
-        if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            //Sanitize Post
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
-            $data = [
-                'query' => trim($_POST['query']),
-                'query_err' => "",
-            ];
-
-            if (empty($_POST['query'])) {
-                $data['query_err'] = "Please enter a word";
-            }
-            if (!empty($data["query_err"])) {
-                $data['success'] = false;
-            } else {
-                $data['success'] = true;
-                $_SESSION['query'] = $data['query'];
-            }
-            echo json_encode($data);
-        } else {
-            header('location: ' . URLROOT . '/medias/index');
-        }
-    }
-
-    public function viewSearch()
-    {
-        $search_list = $this->entitiesModel->search($_SESSION['query']);
-        $data = [
-            'search_list' => $search_list,
-        ];
-        if (empty($data['search_list'])) {
-            flash('search_message', 'Nothing to show');
-        } else {
-            flash('search_message', "We found" . " " . count($data['search_list']), "has-text-white");
-        }
-        $this->view("medias/search", $data);
     }
 
     /**
