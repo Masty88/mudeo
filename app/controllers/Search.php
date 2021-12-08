@@ -50,7 +50,7 @@ class Search extends Controller
     }
 
     /**
-     * Display search result
+     * Display search results
      */
 
     public function viewSearch()
@@ -91,6 +91,14 @@ class Search extends Controller
         foreach ($watch_list as $add) {
             array_push($_SESSION['array_watch'], $add->entity_id);
         }
+    }
+
+    public function error(){
+        $data=[
+            'title'=> "BAD REQUEST",
+        ];
+        http_response_code(404);
+        $this->view("pages/404", $data);
     }
 
 }

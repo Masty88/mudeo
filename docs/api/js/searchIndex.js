@@ -106,20 +106,15 @@ Search.appendIndex(
             "summary": "Hydrate\u0020array\u0020for\u0020user\u0020watch\u0020list",
             "url": "classes/Medias.html#method_createArrayList"
         },                {
-            "fqsen": "\\Medias\u003A\u003Asearch\u0028\u0029",
-            "name": "search",
-            "summary": "Search\u0020in\u0020sql\u0020and\u0020show\u0020result\u0020page",
-            "url": "classes/Medias.html#method_search"
-        },                {
-            "fqsen": "\\Medias\u003A\u003AviewSearch\u0028\u0029",
-            "name": "viewSearch",
-            "summary": "",
-            "url": "classes/Medias.html#method_viewSearch"
-        },                {
             "fqsen": "\\Medias\u003A\u003Aerror\u0028\u0029",
             "name": "error",
             "summary": "Redirect\u0020to\u0020page\u0020404",
             "url": "classes/Medias.html#method_error"
+        },                {
+            "fqsen": "\\Medias\u003A\u003A\u0024entitiesModel",
+            "name": "entitiesModel",
+            "summary": "",
+            "url": "classes/Medias.html#property_entitiesModel"
         },                {
             "fqsen": "\\PageError",
             "name": "PageError",
@@ -158,32 +153,27 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Pages\u003A\u003Ashow\u0028\u0029",
             "name": "show",
-            "summary": "",
+            "summary": "Show\u0020media\u0020and\u0020count\u0020unique\u0020view\u0020for\u0020video",
             "url": "classes/Pages.html#method_show"
         },                {
             "fqsen": "\\Pages\u003A\u003Aabout\u0028\u0029",
             "name": "about",
-            "summary": "",
+            "summary": "Show\u0020page\u0020about",
             "url": "classes/Pages.html#method_about"
         },                {
             "fqsen": "\\Pages\u003A\u003AcreateArrayList\u0028\u0029",
             "name": "createArrayList",
-            "summary": "",
+            "summary": "Hydrate\u0020array\u0020for\u0020user\u0020watch\u0020list",
             "url": "classes/Pages.html#method_createArrayList"
         },                {
             "fqsen": "\\Pages\u003A\u003AcreateArrayListLiked\u0028\u0029",
             "name": "createArrayListLiked",
-            "summary": "",
+            "summary": "Hydrate\u0020array\u0020for\u0020user\u0020liked\u0020list",
             "url": "classes/Pages.html#method_createArrayListLiked"
-        },                {
-            "fqsen": "\\Pages\u003A\u003AviewSearch\u0028\u0029",
-            "name": "viewSearch",
-            "summary": "",
-            "url": "classes/Pages.html#method_viewSearch"
         },                {
             "fqsen": "\\Pages\u003A\u003Aerror\u0028\u0029",
             "name": "error",
-            "summary": "",
+            "summary": "No\u0020method\u0020found",
             "url": "classes/Pages.html#method_error"
         },                {
             "fqsen": "\\Pages\u003A\u003A\u0024entitiesModel",
@@ -196,34 +186,14 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Pages.html#property_categoriesContainers"
         },                {
-            "fqsen": "\\Posts",
-            "name": "Posts",
-            "summary": "",
-            "url": "classes/Posts.html"
-        },                {
-            "fqsen": "\\Posts\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Posts.html#method___construct"
-        },                {
-            "fqsen": "\\Posts\u003A\u003Aindex\u0028\u0029",
-            "name": "index",
-            "summary": "",
-            "url": "classes/Posts.html#method_index"
-        },                {
-            "fqsen": "\\Posts\u003A\u003Aadd\u0028\u0029",
-            "name": "add",
-            "summary": "",
-            "url": "classes/Posts.html#method_add"
-        },                {
             "fqsen": "\\Users",
             "name": "Users",
-            "summary": "",
+            "summary": "App\u0020Medias\u0020Class\nManage\u0020all\u0020the\u0020Users\u0020Action",
             "url": "classes/Users.html"
         },                {
             "fqsen": "\\Users\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "User\u0020constructor\nConnection\u0020to\u0020sql\u0020model\nAutomatic\u0020connection\u0020if\u0020cookie\u0020exist",
             "url": "classes/Users.html#method___construct"
         },                {
             "fqsen": "\\Users\u003A\u003Aindex\u0028\u0029",
@@ -233,37 +203,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Users\u003A\u003Aregister\u0028\u0029",
             "name": "register",
-            "summary": "",
+            "summary": "Function\u0020used\u0020to\u0020register\u0020a\u0020user.",
             "url": "classes/Users.html#method_register"
         },                {
             "fqsen": "\\Users\u003A\u003Alogin\u0028\u0029",
             "name": "login",
-            "summary": "",
+            "summary": "Function\u0020used\u0020to\u0020login\u0020a\u0020user.",
             "url": "classes/Users.html#method_login"
         },                {
             "fqsen": "\\Users\u003A\u003Amember\u0028\u0029",
             "name": "member",
-            "summary": "",
+            "summary": "Function\u0020used\u0020to\u0020modify\u0020user\u0020information.",
             "url": "classes/Users.html#method_member"
         },                {
             "fqsen": "\\Users\u003A\u003AmodifyAccount\u0028\u0029",
             "name": "modifyAccount",
-            "summary": "",
+            "summary": "Function\u0020used\u0020to\u0020modify\u0020user\u0020information.",
             "url": "classes/Users.html#method_modifyAccount"
         },                {
             "fqsen": "\\Users\u003A\u003AdeleteAcc\u0028\u0029",
             "name": "deleteAcc",
-            "summary": "",
+            "summary": "Function\u0020used\u0020to\u0020delete\u0020user\u0020information.",
             "url": "classes/Users.html#method_deleteAcc"
         },                {
             "fqsen": "\\Users\u003A\u003AsendToken\u0028\u0029",
             "name": "sendToken",
-            "summary": "",
+            "summary": "Function\u0020used\u0020to\u0020send\u0020reset\u0020token\u0020to\u0020user",
             "url": "classes/Users.html#method_sendToken"
         },                {
             "fqsen": "\\Users\u003A\u003Areset\u0028\u0029",
             "name": "reset",
-            "summary": "",
+            "summary": "Function\u0020used\u0020to\u0020send\u0020reset\u0020user\u0020password",
             "url": "classes/Users.html#method_reset"
         },                {
             "fqsen": "\\Users\u003A\u003AcheckForExpiringToken\u0028\u0029",
@@ -315,6 +285,16 @@ Search.appendIndex(
             "name": "error",
             "summary": "",
             "url": "classes/Users.html#method_error"
+        },                {
+            "fqsen": "\\Users\u003A\u003A\u0024userModel",
+            "name": "userModel",
+            "summary": "",
+            "url": "classes/Users.html#property_userModel"
+        },                {
+            "fqsen": "\\Users\u003A\u003A\u0024entitiesModel",
+            "name": "entitiesModel",
+            "summary": "",
+            "url": "classes/Users.html#property_entitiesModel"
         },                {
             "fqsen": "\\flash\u0028\u0029",
             "name": "flash",
@@ -2241,31 +2221,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Entities.html#property_db"
         },                {
-            "fqsen": "\\Post",
-            "name": "Post",
-            "summary": "",
-            "url": "classes/Post.html"
-        },                {
-            "fqsen": "\\Post\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Post.html#method___construct"
-        },                {
-            "fqsen": "\\Post\u003A\u003AgetPosts\u0028\u0029",
-            "name": "getPosts",
-            "summary": "",
-            "url": "classes/Post.html#method_getPosts"
-        },                {
-            "fqsen": "\\Post\u003A\u003AaddPost\u0028\u0029",
-            "name": "addPost",
-            "summary": "",
-            "url": "classes/Post.html#method_addPost"
-        },                {
-            "fqsen": "\\Post\u003A\u003A\u0024db",
-            "name": "db",
-            "summary": "",
-            "url": "classes/Post.html#property_db"
-        },                {
             "fqsen": "\\User",
             "name": "User",
             "summary": "",
@@ -2360,6 +2315,51 @@ Search.appendIndex(
             "name": "db",
             "summary": "",
             "url": "classes/User.html#property_db"
+        },                {
+            "fqsen": "\\Search",
+            "name": "Search",
+            "summary": "",
+            "url": "classes/Search.html"
+        },                {
+            "fqsen": "\\Search\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Search.html#method___construct"
+        },                {
+            "fqsen": "\\Search\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "",
+            "url": "classes/Search.html#method_index"
+        },                {
+            "fqsen": "\\Search\u003A\u003Asearch\u0028\u0029",
+            "name": "search",
+            "summary": "Search\u0020in\u0020sql",
+            "url": "classes/Search.html#method_search"
+        },                {
+            "fqsen": "\\Search\u003A\u003AviewSearch\u0028\u0029",
+            "name": "viewSearch",
+            "summary": "Display\u0020search\u0020results",
+            "url": "classes/Search.html#method_viewSearch"
+        },                {
+            "fqsen": "\\Search\u003A\u003AcreateArrayListLiked\u0028\u0029",
+            "name": "createArrayListLiked",
+            "summary": "Hydrate\u0020array\u0020for\u0020user\u0020liked\u0020list",
+            "url": "classes/Search.html#method_createArrayListLiked"
+        },                {
+            "fqsen": "\\Search\u003A\u003AcreateArrayList\u0028\u0029",
+            "name": "createArrayList",
+            "summary": "Hydrate\u0020array\u0020for\u0020user\u0020watch\u0020list",
+            "url": "classes/Search.html#method_createArrayList"
+        },                {
+            "fqsen": "\\Search\u003A\u003Aerror\u0028\u0029",
+            "name": "error",
+            "summary": "",
+            "url": "classes/Search.html#method_error"
+        },                {
+            "fqsen": "\\Search\u003A\u003A\u0024entitiesModel",
+            "name": "entitiesModel",
+            "summary": "",
+            "url": "classes/Search.html#property_entitiesModel"
         },                {
             "fqsen": "\\",
             "name": "\\",

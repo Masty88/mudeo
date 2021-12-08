@@ -69,6 +69,10 @@ class Pages extends Controller {
         $this->view("pages/about", $data);
     }
 
+    /**
+     * Hydrate array for user watch list
+     */
+
     protected function createArrayList(){
         $watch_list=$this->entitiesModel->getFromWatchList($_SESSION['user_id']);
         $added=[];
@@ -78,6 +82,10 @@ class Pages extends Controller {
         }
     }
 
+    /**
+     * Hydrate array for user liked list
+     */
+
     protected function createArrayListLiked(){
         $watch_list=$this->entitiesModel->getFromLikeList($_SESSION['user_id']);
         $_SESSION['array_like']=[];
@@ -86,10 +94,15 @@ class Pages extends Controller {
         }
     }
 
+    /**
+     * No method found
+     */
+
     public function error(){
         $data=[
             'title'=> "BAD REQUEST",
         ];
+        http_response_code(404);
         $this->view("pages/404", $data);
     }
 }
