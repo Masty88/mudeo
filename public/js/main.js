@@ -607,7 +607,7 @@ if(video[0]){
         // fetch(url) ...
         const defaultPosition = {
             videoId,
-            position: 0
+            position: 0,
         }
 
         try {
@@ -626,11 +626,9 @@ if(video[0]){
                 videoId,
                 position
             }));
-            console.log("saved");
         } catch (error) {}
     }
 
     const result =JSON.parse(getPosition(videoId));
-    console.log(result.position);
     video[0].currentTime = result.position;
 }

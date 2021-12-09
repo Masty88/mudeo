@@ -37,6 +37,7 @@ class Pages extends Controller {
         $data = [
             'entity'=>$entity,
             'next_video'=>$next_video,
+            'userId'=>$_SESSION['user_id']
         ];
         if($id){
 
