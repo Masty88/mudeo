@@ -530,7 +530,12 @@ if(id){
     }
 
     showVideo[0].addEventListener("pause",(e)=>{
-        previewOverlay[0].style.cssText="display:block;";
+
+        if(showVideo[0].readyState === 4){
+            previewOverlay[0].style.cssText="display:block;";
+        }else if(showVideo[0].readyState === 1){
+            previewOverlay[0].style.cssText="display:none;";
+        }
     })
 
 //When video end
