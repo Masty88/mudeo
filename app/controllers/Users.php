@@ -348,12 +348,12 @@ class Users extends Controller
                         $mail->isSMTP(); //Send using SMTP
                         $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
                         $mail->SMTPAuth = true; //Enable SMTP authentication
-                        $mail->Username = 'emanuelemastaglia@gmail.com'; //SMTP username
-                        $mail->Password = ''; //SMTP password
+                        $mail->Username = 'mudeodev@gmail.com'; //SMTP username
+                        $mail->Password = 'emma91020?'; //SMTP password
                         $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
                         $mail->Port = 465; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-                        $mail->setFrom("emanuelemastaglia@gmail.com");
+                        $mail->setFrom("mudeodev@gmail.com");
                         $mail->addAddress($data['email']);
                         $mail->addReplyTo($data['email'], "name");
 

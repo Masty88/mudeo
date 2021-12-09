@@ -32,7 +32,7 @@ class User
      * @param $email
      * @return false
      */
-    public function findIdUserByEmail($email): bool
+    public function findIdUserByEmail($email)
     {
         $this->db->query('SELECT * FROM users WHERE email = :email');
         $this->db->bind(':email', $email);
