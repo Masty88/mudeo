@@ -584,3 +584,53 @@ if (errorPage) {
         addEventListener("resize", initCanvas, false);
     }, 15);
 }
+/**
+ * Put video current time in local storage
+ */
+/*---Remember Video Position---*/
+const video = document.getElementsByClassName("showVideo");
+const videoId = window.location.href;
+let intervalHandle = null;
+
+if(video[0]){
+    video[0].addEventListener("play", (event) => {
+        intervalHandle = setInterval(() => {
+            savePosition(videoId, video[0].currentTime);
+        }, 100)
+    })
+
+    video[0].addEventListener("pause", (event) => {
+        clearInterval(intervalHandle);
+    })
+
+    const getPosition = (videoId) => {
+        // fetch(url) ...
+        const defaultPosition = {
+            videoId,
+            position: 0
+        }
+
+        try {
+            return localStorage.getItem("position") || defaultPosition;
+        } catch (error) {
+
+        }
+
+        return defaultPosition;
+    }
+
+    const savePosition = (videoId, position) => {
+        // fetch(url, {method: 'POST', body: {videoId, position}}) ...
+        try {
+            localStorage.setItem("position", JSON.stringify({
+                videoId,
+                position
+            }));
+            console.log("saved");
+        } catch (error) {}
+    }
+
+    const result =JSON.parse(getPosition(videoId));
+    console.log(result.position);
+    video[0].currentTime = result.position;
+}
