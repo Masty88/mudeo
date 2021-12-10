@@ -14,7 +14,7 @@
             </h2>
         </div>
     </div>
-    <div class="columns ml-6">
+    <div class="columns ml-6 columns scroll is-flex-wrap-wrap ml-6">
         <?php foreach ($data['list'] as $list) : ?>
             <div class=" mt-4">
                 <div class="image preview-container">
@@ -26,7 +26,7 @@
                                 <p class="has-text-white"><?= $list->view_count; ?> views </p>
                             </div>
                         </div>
-                        <div class="columns ">
+                        <div class="columns  mobile_btn">
                             <div class="column mr-2 is-1 is-gapless ">
                                 <a href="<?= URLROOT ?>/pages/show/<?= $list->id ?>" class="button button is-dark is-small">
                                     <span class="icon is-small">
@@ -89,9 +89,9 @@
             </h2>
         </div>
     </div>
-    <div class="columns is-flex-wrap-wrap ml-6">
+    <div class="columns scroll is-flex-wrap-wrap ml-6">
         <?php foreach ($data['watch_list'] as $watch_list) : ?>
-            <div class="previewContainer mt-4">
+            <div class="previewContainer mt-4 is-flex-mobile is-justify-content-center">
                 <div class="image preview-container">
                     <img   src="<?= URLROOT?>/<?= $watch_list->thumbnail; ?>">
                     <div class="actions box ">
@@ -101,7 +101,7 @@
                                 <p class="has-text-white"><?= $watch_list->view_count; ?> view </p>
                             </div>
                         </div>
-                        <div class="columns">
+                        <div class="columns  mobile_btn">
                             <div class="column mr-2 is-1 is-gapless">
                                 <a href="<?= URLROOT ?>/pages/show/<?= $watch_list->showId ?>" class="button button is-dark is-small">
                                     <span class="icon is-small">
@@ -119,7 +119,7 @@
                                     </span>
                                 </form>
                             </div>
-                            <div class="column is-3"></div>
+                            <div class="column is-3 is-hidden-mobile"></div>
                             <div class="column">
                                 <?php if(!isLiked($watch_list->showId)):?>
                                     <form class="likedList"  method="post">
