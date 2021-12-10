@@ -630,5 +630,11 @@ if(video[0]){
     }
 
     const result =JSON.parse(getPosition(videoId));
-    video[0].currentTime = result.position;
+    if(result.videoId===window.location.href){
+        console.log("remember")
+        video[0].currentTime = result.position;
+    }else{
+        video[0].currentTime = 0;
+    }
+
 }
