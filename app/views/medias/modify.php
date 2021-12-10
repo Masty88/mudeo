@@ -1,5 +1,4 @@
 <?php require APPROOT.'/views/inc/header.php';?>
-
 <section class="hero">
     <div class="hero-body">
         <div class="columns is-centered">
@@ -42,7 +41,7 @@
                                                     <select name="category_id" class="<?php echo (!empty($data['category_err'])) ? 'is-danger' : '' ?>">
                                                         <option> Chose type of media </option>
                                                         <option> Chose type of media </option>
-                                                        <option value="1" >Feature Films</option>
+                                                        <option value="1">Feature Films</option>
                                                         <option value="14"> Short Films</option>
                                                         <option value="20">Documentary</option>
                                                         <option value="13">Commercials</option>

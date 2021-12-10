@@ -5,7 +5,11 @@
  */
 
 class Controller{
-    //Load model
+    /**
+     * Load the model
+     * @param $model
+     * @return mixed
+     */
     public function model($model){
         //Require Model
         require_once '../app/models/'.$model. '.php';
@@ -13,7 +17,11 @@ class Controller{
         return new $model();
     }
 
-    //Render view
+    /**
+     * Render the view
+     * @param $view
+     * @param array $data
+     */
     public function view($view, $data=[]){
         //check for view
         if(file_exists('../app/views/'.$view. '.php')){

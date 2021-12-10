@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class entities
+ */
 class Entities
 {
     private $db;
@@ -8,18 +11,30 @@ class Entities
         $this->db = new Database;
     }
 
+    /**
+     * Choose random entity
+     * @param $entity
+     */
     public function createPreviewVideo($entity){
         if( $entity== null){
             $entity=$this->getRandomEntity();
         }
     }
 
+    /**
+     * Choose random entity
+     * @return mixed
+     */
     public function getRandomEntity(){
         $this->db->query("SELECT * FROM entities ORDER BY RAND() LIMIT 1");
         $results=$this->db->single();
         return $results;
     }
 
+    /**
+     * Get entities
+     * @return mixed
+     */
     public function getEntities(){
         $this->db->query("SELECT entities.name AS filmName, 
                                            entities.categoryId, 
@@ -36,6 +51,11 @@ class Entities
         return $results;
     }
 
+    /**
+     * Add media
+     * @param $data
+     * @return bool
+     */
     public function addMedia($data){
         $this->db->query("INSERT INTO entities (name,thumbnail,preview,categoryId,userId,description,full_media) VALUES (:name, :thumbnail, :preview ,:categoryId, :userId, :description, :full_media )");
         $this->db->bind(':name', $data['title']);
@@ -53,11 +73,10 @@ class Entities
         }
     }
 
-    /*
+    /**
      * Count media for user
      * Return false if upload limit has been reached
      */
-
     public function countMediaForUsers($userId){
         $this->db->query('SELECT * FROM entities WHERE userId = :userId');
         $this->db->bind(':userId', $userId);
@@ -71,6 +90,11 @@ class Entities
         }
     }
 
+    /**
+     * Return entity by ID
+     * @param $id
+     * @return mixed
+     */
     public function getEntityById($id){
         $this->db->query('SELECT * FROM entities WHERE id= :id');
         $this->db->bind(':id', $id);
@@ -78,6 +102,11 @@ class Entities
         return $row;
     }
 
+    /**
+     * Return entities from userId
+     * @param $userId
+     * @return mixed
+     */
     public function getEntitiesForUser($userId){
         $this->db->query('SELECT * FROM entities WHERE userid= :id');
         $this->db->bind(':id', $userId);
@@ -85,12 +114,21 @@ class Entities
         return $results;
     }
 
+    /**
+     * Delete media
+     * @param $id
+     */
     public function deleteMedia($id){
         $this->db->query('DELETE FROM entities WHERE id = :id');
         $this->db->bind(':id', $id);
         $this->db->execute();
     }
 
+    /**
+     * Modify media
+     * @param $data
+     * @return bool
+     */
     public function modifyMedia($data){
         $this->db->query('UPDATE entities SET name = :name, description = :description, categoryId = :categoryId, thumbnail = :thumbnail  WHERE id= :id');
         $this->db->bind(':name', $data['title']);
@@ -105,6 +143,11 @@ class Entities
         }
     }
 
+    /**
+     * Add to user watch list
+     * @param $data
+     * @return bool
+     */
     public function addToWatchList($data){
         $this->db->query('INSERT INTO users_watch_list (entity_id,user_id) VALUES (:entity_id, :user_id)');
         $this->db->bind(':entity_id',$data['entityId']);
@@ -116,6 +159,11 @@ class Entities
         }
     }
 
+    /**
+     * Get from the user watch list
+     * @param $userId
+     * @return mixed
+     */
     public function getFromWatchList($userId){
         $this->db->query('SELECT entities.name AS filmName, 
                                            entities.categoryId, 
@@ -133,12 +181,21 @@ class Entities
         return $results;
     }
 
+    /**
+     * Remove from user watch list
+     * @param $id
+     */
     public function removeFromWatchList($id){
         $this->db->query('DELETE FROM users_watch_list WHERE entity_id = :id');
         $this->db->bind(':id', $id);
         $this->db->execute();
     }
 
+    /**
+     * Not add double in watch list
+     * @param $data
+     * @return bool
+     */
     public function preventDoubleInWatchList($data)
     {
         $this->db->query('SELECT * FROM users_watch_list WHERE user_id = :user_id AND entity_id= :entity_id');
@@ -154,6 +211,11 @@ class Entities
         }
     }
 
+    /**
+     * Add to like list
+     * @param $data
+     * @return bool
+     */
     public function addToLikeList($data){
         $this->db->query('INSERT INTO liked_media (entity_id,user_id) VALUES (:entity_id, :user_id)');
         $this->db->bind(':entity_id',$data['entityId']);
@@ -165,6 +227,11 @@ class Entities
         }
     }
 
+    /**
+     * Not add double in liked list
+     * @param $data
+     * @return bool
+     */
     public function preventDoubleInLikeList($data)
     {
         $this->db->query('SELECT * FROM liked_media WHERE user_id = :user_id AND entity_id= :entity_id');
@@ -180,6 +247,11 @@ class Entities
         }
     }
 
+    /**
+     * Get from like list
+     * @param $userId
+     * @return mixed
+     */
     public function getFromLikeList($userId){
         $this->db->query('SELECT * FROM liked_media WHERE user_id = :user_id');
         $this->db->bind(':user_id', $userId );
@@ -187,12 +259,21 @@ class Entities
         return $results;
     }
 
+    /**
+     * Remove from like list
+     * @param $id
+     */
     public function removeFromLikeList($id){
         $this->db->query('DELETE FROM liked_media WHERE entity_id = :id');
         $this->db->bind(':id', $id);
         $this->db->execute();
     }
 
+    /**
+     * Serach in DB
+     * @param $input
+     * @return mixed
+     */
     public function search($input){
         $sql = "SELECT * FROM entities WHERE name LIKE CONCAT( '%', :input, '%')";
         $this->db->query($sql);
@@ -203,12 +284,20 @@ class Entities
             return $results;
     }
 
+    /**
+     * Increment entity view
+     * @param $id
+     */
     public function countViews($id){
         $this->db->query("UPDATE entities SET view_count = view_count + 1 WHERE id= :id");
         $this->db->bind(':id', $id);
         $this->db->execute();
     }
 
+    /**
+     * Count unique view base on userId
+     * @param $id
+     */
     public function countUniqueViews($id){
         $this->db->query("INSERT INTO count_views (user_id,entity_id) VALUES (:user_id, :entity_id)");
         $this->db->bind(':entity_id', $id);
@@ -216,6 +305,10 @@ class Entities
         $this->db->execute();
     }
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public function preventDoubleInViewsCount($id)
     {
         $this->db->query('SELECT * FROM count_views WHERE user_id = :user_id AND entity_id= :entity_id');
@@ -232,6 +325,9 @@ class Entities
 
     }
 
+    /**
+     * Return random video
+     */
     public function getNextVideo(){
         $this->db->query('SELECT * FROM entities WHERE id !=:id ');
     }

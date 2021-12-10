@@ -66,47 +66,47 @@
 
 
 
-     <?php if(isLoggedIn()) : ?>
-         <div class="navbar-end">
-             <div class="navbar-item">
-                 <a href="<?=URLROOT?>/users/member">
+        <?php if(isLoggedIn()) : ?>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a href="<?=URLROOT?>/users/member">
                  <span class="icon is-large ">
                  <span class="fa">
                       <i class="fas fa-user fa-2x"></i>
                     </span>
                  </span>
-                 </a>
-             </div>
-             <div class="navbar-item">
-                 <a href="<?=URLROOT?>/medias/add">
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="<?=URLROOT?>/medias/add">
                  <span class="icon is-large">
                  <span class="fa">
                       <i class="fas fa-upload  fa-2x"></i>
                     </span>
                  </span>
-                 </a>
-             </div>
-             <div class="navbar-item">
-                 <div class="buttons">
-                     <a href="<?= URLROOT ?>/users/logout" class="button is-danger">
-                         Log out
-                     </a>
-                 </div>
-             </div>
-         </div>
-     <?php  else : ?>
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a href="<?= URLROOT ?>/users/register" class="button is-purple">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a href="<?= URLROOT ?>/users/login" class="button is-light">
-                        Log in
                     </a>
                 </div>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="<?= URLROOT ?>/users/logout" class="button is-danger">
+                            Log out
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
+        <?php  else : ?>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="<?= URLROOT ?>/users/register" class="button is-purple">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a href="<?= URLROOT ?>/users/login" class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
         <?php endif; ?>
     </div>
 </nav>

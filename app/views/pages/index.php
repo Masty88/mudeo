@@ -1,4 +1,4 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
+<?php require APPROOT . '/views/inc/header.php' ;?>
 <section class="hero is-large is-custom is-relative">
     <img src="<?= URLROOT ?>/<?= $data['preview']->thumbnail; ?>" alt="" class="heroVideo" id="previewImage" hidden />
     <video id="previewVideo" class="heroVideo playIntro" controls muted autoplay id="previewVideo">
@@ -105,4 +105,5 @@
         </div>
     <?php endforeach; ?>
 </section>
+
 <?php require APPROOT . '/views/inc/footer.php'; ?>

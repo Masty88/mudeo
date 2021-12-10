@@ -111,8 +111,6 @@
                                                             <textarea class="textarea" placeholder="enter a short description" name="body" id="body-post" rows="10" disabled><?= $data['account']->user_bio?></textarea>
                                                         </div>
                                                     </div>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

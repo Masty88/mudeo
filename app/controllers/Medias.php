@@ -73,7 +73,7 @@ class Medias extends Controller
             if ($_POST['category_id'] === "Chose type of media") {
                 $data['category_err'] = "please select a category";
             } else {
-                $data['category_id']=$_POST['category_id'];
+                $data['category_id'] = $_POST['category_id'];
             }
 
             //Validate cover Image
@@ -331,7 +331,7 @@ class Medias extends Controller
                         if ($_POST['category_id'] === "Chose type of media") {
                             $data['category_err'] = "please select a category";
                         } else {
-                            $data['category_id']=$_POST['category_id'];
+                            $data['category_id'] = $_POST['category_id'];
                         }
 
                         //Validate cover Image

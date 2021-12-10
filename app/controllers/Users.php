@@ -343,7 +343,9 @@ class Users extends Controller
                     try {
                         $html =
                             '<h2 class="has-text-warning">This token is valable 1h</h2>
-                        <a href="mudeo.test/users/reset/' . $token . '">Reset</a>';
+                        <a href="mudeo.test/users/reset/' .
+                            $token .
+                            '">Reset</a>';
                         $mail->SMTPDebug = PHPMailer\PHPMailer\SMTP::DEBUG_SERVER; //Enable verbose debug output
                         $mail->isSMTP(); //Send using SMTP
                         $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
@@ -363,7 +365,7 @@ class Users extends Controller
                         $mail->AltBody = "test";
 
                         $mail->send();
-                        flash('register_success',"token sent verify your email");
+                        flash('register_success', "token sent verify your email");
                         header('location: ' . URLROOT . '/users/login');
                     } catch (Exception $err) {
                         echo $err;
