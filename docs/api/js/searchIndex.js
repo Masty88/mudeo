@@ -188,7 +188,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Users",
             "name": "Users",
-            "summary": "App\u0020Medias\u0020Class\nManage\u0020all\u0020the\u0020Users\u0020Action",
+            "summary": "App\u0020Users\u0020Class\nManage\u0020all\u0020the\u0020Users\u0020Action",
             "url": "classes/Users.html"
         },                {
             "fqsen": "\\Users\u003A\u003A__construct\u0028\u0029",
@@ -208,18 +208,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Users\u003A\u003Alogin\u0028\u0029",
             "name": "login",
-            "summary": "Function\u0020used\u0020to\u0020login\u0020a\u0020user.",
+            "summary": "Function\u0020used\u0020to\u0020log\u0020in\u0020a\u0020user.",
             "url": "classes/Users.html#method_login"
         },                {
             "fqsen": "\\Users\u003A\u003Amember\u0028\u0029",
             "name": "member",
             "summary": "Function\u0020used\u0020to\u0020modify\u0020user\u0020information.",
             "url": "classes/Users.html#method_member"
-        },                {
-            "fqsen": "\\Users\u003A\u003AmodifyAccount\u0028\u0029",
-            "name": "modifyAccount",
-            "summary": "Function\u0020used\u0020to\u0020modify\u0020user\u0020information.",
-            "url": "classes/Users.html#method_modifyAccount"
         },                {
             "fqsen": "\\Users\u003A\u003AdeleteAcc\u0028\u0029",
             "name": "deleteAcc",
@@ -238,63 +233,43 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Users\u003A\u003AcheckForExpiringToken\u0028\u0029",
             "name": "checkForExpiringToken",
-            "summary": "",
+            "summary": "Check\u0020if\u0020reset\u0020token\u0020has\u0020expired",
             "url": "classes/Users.html#method_checkForExpiringToken"
         },                {
             "fqsen": "\\Users\u003A\u003Alogout\u0028\u0029",
             "name": "logout",
-            "summary": "",
+            "summary": "Disconnect\u0020user\u0020from\u0020the\u0020application",
             "url": "classes/Users.html#method_logout"
         },                {
             "fqsen": "\\Users\u003A\u003AcreateUserSession\u0028\u0029",
             "name": "createUserSession",
-            "summary": "",
+            "summary": "Create\u0020user\u0020session",
             "url": "classes/Users.html#method_createUserSession"
         },                {
             "fqsen": "\\Users\u003A\u003AcreateUserToken\u0028\u0029",
             "name": "createUserToken",
-            "summary": "",
+            "summary": "Create\u0020user\u0020cookie\u0020logged",
             "url": "classes/Users.html#method_createUserToken"
         },                {
             "fqsen": "\\Users\u003A\u003ArecoverUserToken\u0028\u0029",
             "name": "recoverUserToken",
-            "summary": "",
+            "summary": "If\u0020exist\u0020recover\u0020the\u0020cookie",
             "url": "classes/Users.html#method_recoverUserToken"
         },                {
             "fqsen": "\\Users\u003A\u003AautoLog\u0028\u0029",
             "name": "autoLog",
-            "summary": "",
+            "summary": "If\u0020cookie\u0020exist\u0020autolog\u0020the\u0020user",
             "url": "classes/Users.html#method_autoLog"
-        },                {
-            "fqsen": "\\Users\u003A\u003AviewSearch\u0028\u0029",
-            "name": "viewSearch",
-            "summary": "",
-            "url": "classes/Users.html#method_viewSearch"
-        },                {
-            "fqsen": "\\Users\u003A\u003AcreateArrayList\u0028\u0029",
-            "name": "createArrayList",
-            "summary": "",
-            "url": "classes/Users.html#method_createArrayList"
-        },                {
-            "fqsen": "\\Users\u003A\u003AcreateArrayListLiked\u0028\u0029",
-            "name": "createArrayListLiked",
-            "summary": "",
-            "url": "classes/Users.html#method_createArrayListLiked"
         },                {
             "fqsen": "\\Users\u003A\u003Aerror\u0028\u0029",
             "name": "error",
-            "summary": "",
+            "summary": "Redirect\u0020to\u0020page\u0020404",
             "url": "classes/Users.html#method_error"
         },                {
             "fqsen": "\\Users\u003A\u003A\u0024userModel",
             "name": "userModel",
             "summary": "",
             "url": "classes/Users.html#property_userModel"
-        },                {
-            "fqsen": "\\Users\u003A\u003A\u0024entitiesModel",
-            "name": "entitiesModel",
-            "summary": "",
-            "url": "classes/Users.html#property_entitiesModel"
         },                {
             "fqsen": "\\flash\u0028\u0029",
             "name": "flash",
@@ -323,12 +298,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Controller\u003A\u003Amodel\u0028\u0029",
             "name": "model",
-            "summary": "",
+            "summary": "Load\u0020the\u0020model",
             "url": "classes/Controller.html#method_model"
         },                {
             "fqsen": "\\Controller\u003A\u003Aview\u0028\u0029",
             "name": "view",
-            "summary": "",
+            "summary": "Render\u0020the\u0020view",
             "url": "classes/Controller.html#method_view"
         },                {
             "fqsen": "\\Core",
@@ -378,32 +353,32 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Database\u003A\u003Abind\u0028\u0029",
             "name": "bind",
-            "summary": "",
+            "summary": "Bind\u0020value",
             "url": "classes/Database.html#method_bind"
         },                {
             "fqsen": "\\Database\u003A\u003Aexecute\u0028\u0029",
             "name": "execute",
-            "summary": "",
+            "summary": "Execute\u0020the\u0020prepare\u0020statement",
             "url": "classes/Database.html#method_execute"
         },                {
             "fqsen": "\\Database\u003A\u003AresultSet\u0028\u0029",
             "name": "resultSet",
-            "summary": "",
+            "summary": "Get\u0020result\u0020as\u0020array\u0020of\u0020objects",
             "url": "classes/Database.html#method_resultSet"
         },                {
             "fqsen": "\\Database\u003A\u003Asingle\u0028\u0029",
             "name": "single",
-            "summary": "",
+            "summary": "Single\u0020Row",
             "url": "classes/Database.html#method_single"
         },                {
             "fqsen": "\\Database\u003A\u003AsingleAss\u0028\u0029",
             "name": "singleAss",
-            "summary": "",
+            "summary": "Single\u0020Row",
             "url": "classes/Database.html#method_singleAss"
         },                {
             "fqsen": "\\Database\u003A\u003ArowCount\u0028\u0029",
             "name": "rowCount",
-            "summary": "",
+            "summary": "Get\u0020row\u0020count",
             "url": "classes/Database.html#method_rowCount"
         },                {
             "fqsen": "\\Database\u003A\u003A\u0024host",
@@ -2078,7 +2053,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\categoriesContainers",
             "name": "categoriesContainers",
-            "summary": "",
+            "summary": "Class\u0020categories\u0020containers\u0020for\u0020the\u0020home\u0020page",
             "url": "classes/categoriesContainers.html"
         },                {
             "fqsen": "\\categoriesContainers\u003A\u003A__construct\u0028\u0029",
@@ -2098,7 +2073,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Entities",
             "name": "Entities",
-            "summary": "",
+            "summary": "Class\u0020entities",
             "url": "classes/Entities.html"
         },                {
             "fqsen": "\\Entities\u003A\u003A__construct\u0028\u0029",
@@ -2108,102 +2083,102 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Entities\u003A\u003AcreatePreviewVideo\u0028\u0029",
             "name": "createPreviewVideo",
-            "summary": "",
+            "summary": "Choose\u0020random\u0020entity",
             "url": "classes/Entities.html#method_createPreviewVideo"
         },                {
             "fqsen": "\\Entities\u003A\u003AgetRandomEntity\u0028\u0029",
             "name": "getRandomEntity",
-            "summary": "",
+            "summary": "Choose\u0020random\u0020entity",
             "url": "classes/Entities.html#method_getRandomEntity"
         },                {
             "fqsen": "\\Entities\u003A\u003AgetEntities\u0028\u0029",
             "name": "getEntities",
-            "summary": "",
+            "summary": "Get\u0020entities",
             "url": "classes/Entities.html#method_getEntities"
         },                {
             "fqsen": "\\Entities\u003A\u003AaddMedia\u0028\u0029",
             "name": "addMedia",
-            "summary": "",
+            "summary": "Add\u0020media",
             "url": "classes/Entities.html#method_addMedia"
         },                {
             "fqsen": "\\Entities\u003A\u003AcountMediaForUsers\u0028\u0029",
             "name": "countMediaForUsers",
-            "summary": "",
+            "summary": "Count\u0020media\u0020for\u0020user\nReturn\u0020false\u0020if\u0020upload\u0020limit\u0020has\u0020been\u0020reached",
             "url": "classes/Entities.html#method_countMediaForUsers"
         },                {
             "fqsen": "\\Entities\u003A\u003AgetEntityById\u0028\u0029",
             "name": "getEntityById",
-            "summary": "",
+            "summary": "Return\u0020entity\u0020by\u0020ID",
             "url": "classes/Entities.html#method_getEntityById"
         },                {
             "fqsen": "\\Entities\u003A\u003AgetEntitiesForUser\u0028\u0029",
             "name": "getEntitiesForUser",
-            "summary": "",
+            "summary": "Return\u0020entities\u0020from\u0020userId",
             "url": "classes/Entities.html#method_getEntitiesForUser"
         },                {
             "fqsen": "\\Entities\u003A\u003AdeleteMedia\u0028\u0029",
             "name": "deleteMedia",
-            "summary": "",
+            "summary": "Delete\u0020media",
             "url": "classes/Entities.html#method_deleteMedia"
         },                {
             "fqsen": "\\Entities\u003A\u003AmodifyMedia\u0028\u0029",
             "name": "modifyMedia",
-            "summary": "",
+            "summary": "Modify\u0020media",
             "url": "classes/Entities.html#method_modifyMedia"
         },                {
             "fqsen": "\\Entities\u003A\u003AaddToWatchList\u0028\u0029",
             "name": "addToWatchList",
-            "summary": "",
+            "summary": "Add\u0020to\u0020user\u0020watch\u0020list",
             "url": "classes/Entities.html#method_addToWatchList"
         },                {
             "fqsen": "\\Entities\u003A\u003AgetFromWatchList\u0028\u0029",
             "name": "getFromWatchList",
-            "summary": "",
+            "summary": "Get\u0020from\u0020the\u0020user\u0020watch\u0020list",
             "url": "classes/Entities.html#method_getFromWatchList"
         },                {
             "fqsen": "\\Entities\u003A\u003AremoveFromWatchList\u0028\u0029",
             "name": "removeFromWatchList",
-            "summary": "",
+            "summary": "Remove\u0020from\u0020user\u0020watch\u0020list",
             "url": "classes/Entities.html#method_removeFromWatchList"
         },                {
             "fqsen": "\\Entities\u003A\u003ApreventDoubleInWatchList\u0028\u0029",
             "name": "preventDoubleInWatchList",
-            "summary": "",
+            "summary": "Not\u0020add\u0020double\u0020in\u0020watch\u0020list",
             "url": "classes/Entities.html#method_preventDoubleInWatchList"
         },                {
             "fqsen": "\\Entities\u003A\u003AaddToLikeList\u0028\u0029",
             "name": "addToLikeList",
-            "summary": "",
+            "summary": "Add\u0020to\u0020like\u0020list",
             "url": "classes/Entities.html#method_addToLikeList"
         },                {
             "fqsen": "\\Entities\u003A\u003ApreventDoubleInLikeList\u0028\u0029",
             "name": "preventDoubleInLikeList",
-            "summary": "",
+            "summary": "Not\u0020add\u0020double\u0020in\u0020liked\u0020list",
             "url": "classes/Entities.html#method_preventDoubleInLikeList"
         },                {
             "fqsen": "\\Entities\u003A\u003AgetFromLikeList\u0028\u0029",
             "name": "getFromLikeList",
-            "summary": "",
+            "summary": "Get\u0020from\u0020like\u0020list",
             "url": "classes/Entities.html#method_getFromLikeList"
         },                {
             "fqsen": "\\Entities\u003A\u003AremoveFromLikeList\u0028\u0029",
             "name": "removeFromLikeList",
-            "summary": "",
+            "summary": "Remove\u0020from\u0020like\u0020list",
             "url": "classes/Entities.html#method_removeFromLikeList"
         },                {
             "fqsen": "\\Entities\u003A\u003Asearch\u0028\u0029",
             "name": "search",
-            "summary": "",
+            "summary": "Serach\u0020in\u0020DB",
             "url": "classes/Entities.html#method_search"
         },                {
             "fqsen": "\\Entities\u003A\u003AcountViews\u0028\u0029",
             "name": "countViews",
-            "summary": "",
+            "summary": "Increment\u0020entity\u0020view",
             "url": "classes/Entities.html#method_countViews"
         },                {
             "fqsen": "\\Entities\u003A\u003AcountUniqueViews\u0028\u0029",
             "name": "countUniqueViews",
-            "summary": "",
+            "summary": "Count\u0020unique\u0020view\u0020base\u0020on\u0020userId",
             "url": "classes/Entities.html#method_countUniqueViews"
         },                {
             "fqsen": "\\Entities\u003A\u003ApreventDoubleInViewsCount\u0028\u0029",
@@ -2213,7 +2188,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Entities\u003A\u003AgetNextVideo\u0028\u0029",
             "name": "getNextVideo",
-            "summary": "",
+            "summary": "Return\u0020random\u0020video",
             "url": "classes/Entities.html#method_getNextVideo"
         },                {
             "fqsen": "\\Entities\u003A\u003A\u0024db",
@@ -2233,7 +2208,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\User\u003A\u003AfindUserByEmail\u0028\u0029",
             "name": "findUserByEmail",
-            "summary": "",
+            "summary": "Verify\u0020if\u0020user\u0020is\u0020already\u0020in\u0020DB",
             "url": "classes/User.html#method_findUserByEmail"
         },                {
             "fqsen": "\\User\u003A\u003AfindIdUserByEmail\u0028\u0029",
@@ -2243,17 +2218,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\User\u003A\u003Aregister\u0028\u0029",
             "name": "register",
-            "summary": "",
+            "summary": "Insert\u0020data\u0020in\u0020DB",
             "url": "classes/User.html#method_register"
         },                {
             "fqsen": "\\User\u003A\u003Alogin\u0028\u0029",
             "name": "login",
-            "summary": "",
+            "summary": "Log\u0020the\u0020user",
             "url": "classes/User.html#method_login"
         },                {
             "fqsen": "\\User\u003A\u003AstayConnected\u0028\u0029",
             "name": "stayConnected",
-            "summary": "",
+            "summary": "Create\u0020the\u0020cookie\u0020for\u0020the\u0020connection",
             "url": "classes/User.html#method_stayConnected"
         },                {
             "fqsen": "\\User\u003A\u003AstayConnectedTwo\u0028\u0029",
@@ -2263,32 +2238,32 @@ Search.appendIndex(
         },                {
             "fqsen": "\\User\u003A\u003ArecoverToken\u0028\u0029",
             "name": "recoverToken",
-            "summary": "",
+            "summary": "Recover\u0020cookie",
             "url": "classes/User.html#method_recoverToken"
         },                {
             "fqsen": "\\User\u003A\u003AgetFromUser\u0028\u0029",
             "name": "getFromUser",
-            "summary": "",
+            "summary": "Return\u0020data\u0020from\u0020user\u0020table",
             "url": "classes/User.html#method_getFromUser"
         },                {
             "fqsen": "\\User\u003A\u003AmodifyAcc\u0028\u0029",
             "name": "modifyAcc",
-            "summary": "",
+            "summary": "Modify\u0020user\u0020data\u0020in\u0020Db",
             "url": "classes/User.html#method_modifyAcc"
         },                {
             "fqsen": "\\User\u003A\u003AdeleteAcc\u0028\u0029",
             "name": "deleteAcc",
-            "summary": "",
+            "summary": "Delete\u0020Account",
             "url": "classes/User.html#method_deleteAcc"
         },                {
             "fqsen": "\\User\u003A\u003AcreateResetToken\u0028\u0029",
             "name": "createResetToken",
-            "summary": "",
+            "summary": "Create\u0020token\u0020to\u0020reset\u0020the\u0020password",
             "url": "classes/User.html#method_createResetToken"
         },                {
             "fqsen": "\\User\u003A\u003ArecoverResetToken\u0028\u0029",
             "name": "recoverResetToken",
-            "summary": "",
+            "summary": "Recover\u0020user\u0020token\u0020for\u0020password\u0020reset",
             "url": "classes/User.html#method_recoverResetToken"
         },                {
             "fqsen": "\\User\u003A\u003ArecoverResetTokenGet\u0028\u0029",
@@ -2298,17 +2273,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\User\u003A\u003AremoveToken\u0028\u0029",
             "name": "removeToken",
-            "summary": "",
+            "summary": "Remove\u0020reset\u0020toke\u0020after\u0020use\u0020or\u0020if\u0020is\u0020expired",
             "url": "classes/User.html#method_removeToken"
         },                {
             "fqsen": "\\User\u003A\u003AmodifyPassword\u0028\u0029",
             "name": "modifyPassword",
-            "summary": "",
+            "summary": "Modify\u0020password\u0020in\u0020DB",
             "url": "classes/User.html#method_modifyPassword"
         },                {
             "fqsen": "\\User\u003A\u003AremoveCookie\u0028\u0029",
             "name": "removeCookie",
-            "summary": "",
+            "summary": "Remove\u0020cookie\u0020logged\u0020from\u0020DB",
             "url": "classes/User.html#method_removeCookie"
         },                {
             "fqsen": "\\User\u003A\u003A\u0024db",

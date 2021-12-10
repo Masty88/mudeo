@@ -117,11 +117,11 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">App Medias Class
+            <p class="phpdocumentor-summary">App Users Class
 Manage all the Users Action</p>
 
 
@@ -139,13 +139,6 @@ Manage all the Users Action</p>
 
 <dl class="phpdocumentor-table-of-contents">
                 <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Users.html#property_entitiesModel">$entitiesModel</a>
-    <span>
-                &nbsp;: mixed            </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/Users.html#property_userModel">$userModel</a>
     <span>
                 &nbsp;: mixed            </span>
@@ -162,20 +155,6 @@ Connection to sql model
 Automatic connection if cookie exist</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Users.html#method_createUserSession">createUserSession()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Users.html#method_createUserToken">createUserToken()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Users.html#method_deleteAcc">deleteAcc()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -187,7 +166,7 @@ Automatic connection if cookie exist</dd>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>Redirect to page 404</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Users.html#method_index">index()</a>
@@ -201,14 +180,14 @@ Automatic connection if cookie exist</dd>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Function used to login a user.</dd>
+<dd>Function used to log in a user.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Users.html#method_logout">logout()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>Disconnect user from the application</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Users.html#method_member">member()</a>
@@ -222,21 +201,7 @@ Automatic connection if cookie exist</dd>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Users.html#method_modifyAccount">modifyAccount()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd>Function used to modify user information.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Users.html#method_recoverUserToken">recoverUserToken()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
+<dd>Load the model</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Users.html#method_register">register()</a>
@@ -264,42 +229,42 @@ Automatic connection if cookie exist</dd>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
+<dd>Render the view</dd>
 
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Users.html#method_viewSearch">viewSearch()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Users.html#method_autoLog">autoLog()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Users.html#method_createArrayList">createArrayList()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Users.html#method_createArrayListLiked">createArrayListLiked()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
+<dd>If cookie exist autolog the user</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/Users.html#method_checkForExpiringToken">checkForExpiringToken()</a>
     <span>
                         &nbsp;: bool    </span>
 </dt>
-<dd></dd>
+<dd>Check if reset token has expired</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Users.html#method_createUserSession">createUserSession()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Create user session</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Users.html#method_createUserToken">createUserToken()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Create user cookie logged</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a href="classes/Users.html#method_recoverUserToken">recoverUserToken()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>If exist recover the cookie</dd>
 
         </dl>
 
@@ -320,38 +285,6 @@ Automatic connection if cookie exist</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_entitiesModel">
-        $entitiesModel
-        <a href="classes/Users.html#property_entitiesModel" class="headerlink"><i class="fas fa-link"></i></a>
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">15</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">$entitiesModel</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="property_userModel">
         $userModel
         <a href="classes/Users.html#property_userModel" class="headerlink"><i class="fas fa-link"></i></a>
@@ -361,7 +294,7 @@ Automatic connection if cookie exist</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -397,7 +330,7 @@ Automatic connection if cookie exist</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -425,83 +358,6 @@ Automatic connection if cookie exist</p>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_createUserSession">
-        createUserSession()
-        <a href="classes/Users.html#method_createUserSession" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">591</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">createUserSession</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$user</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_createUserToken">
-        createUserToken()
-        <a href="classes/Users.html#method_createUserToken" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">599</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">createUserToken</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
     <h4 class="phpdocumentor-element__name" id="method_deleteAcc">
         deleteAcc()
         <a href="classes/Users.html#method_deleteAcc" class="headerlink"><i class="fas fa-link"></i></a>
@@ -509,7 +365,7 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">387</span>
+    <span class="phpdocumentor-element-found-in__line">291</span>
 
     </aside>
 
@@ -560,17 +416,17 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">652</span>
+    <span class="phpdocumentor-element-found-in__line">546</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Redirect to page 404</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                 <span class="phpdocumentor-signature__name">error</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -593,7 +449,7 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
@@ -626,11 +482,11 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">154</span>
+    <span class="phpdocumentor-element-found-in__line">140</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Function used to login a user.</p>
+        <p class="phpdocumentor-summary">Function used to log in a user.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -659,17 +515,17 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">581</span>
+    <span class="phpdocumentor-element-found-in__line">485</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Disconnect user from the application</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                 <span class="phpdocumentor-signature__name">logout</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -692,7 +548,7 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">230</span>
+    <span class="phpdocumentor-element-found-in__line">212</span>
 
     </aside>
 
@@ -730,111 +586,28 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/libraries/Controller.php"><a href="files/app-libraries-controller.html"><abbr title="app/libraries/Controller.php">Controller.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Load the model</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">model</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$model</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">model</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$model</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$model</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_modifyAccount">
-        modifyAccount()
-        <a href="classes/Users.html#method_modifyAccount" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">310</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Function used to modify user information.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">modifyAccount</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-    <h5 class="phpdocumentor-tag-list__heading" id="tags">
-        Tags
-        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
-    </h5>
-    <dl class="phpdocumentor-tag-list">
-                                    <dt class="phpdocumentor-tag-list__entry">
-                    <span class="phpdocumentor-tag__name">throws</span>
-                </dt>
-                <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><abbr title="\Exception">Exception</abbr></span>
-                                                            
-                                                 <section class="phpdocumentor-description"><p>if user account not modify</p>
-</section>
-
-                                    </dd>
-                        </dl>
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_recoverUserToken">
-        recoverUserToken()
-        <a href="classes/Users.html#method_recoverUserToken" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">603</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">recoverUserToken</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
     
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
@@ -856,7 +629,7 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 
@@ -905,7 +678,7 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">492</span>
+    <span class="phpdocumentor-element-found-in__line">393</span>
 
     </aside>
 
@@ -913,14 +686,14 @@ Automatic connection if cookie exist</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">reset</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$id</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">reset</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$token</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$id</span>
-                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                <span class="phpdocumentor-signature__argument__name">$token</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -964,7 +737,7 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">411</span>
+    <span class="phpdocumentor-element-found-in__line">314</span>
 
     </aside>
 
@@ -1013,34 +786,32 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/libraries/Controller.php"><a href="files/app-libraries-controller.html"><abbr title="app/libraries/Controller.php">Controller.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Render the view</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">view</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$view</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">view</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$view</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">[]</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$view</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$data</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                  = <span class="phpdocumentor-signature__argument__default-value">[]</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
@@ -1055,40 +826,7 @@ Automatic connection if cookie exist</p>
                     <article
         class="phpdocumentor-element
             -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_viewSearch">
-        viewSearch()
-        <a href="classes/Users.html#method_viewSearch" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">621</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">viewSearch</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
+            -private
                                                         "
 >
     <h4 class="phpdocumentor-element__name" id="method_autoLog">
@@ -1098,83 +836,17 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">607</span>
+    <span class="phpdocumentor-element-found-in__line">528</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">If cookie exist autolog the user</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
+    <span class="phpdocumentor-signature__visibility">private</span>
                 <span class="phpdocumentor-signature__name">autoLog</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
     
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_createArrayList">
-        createArrayList()
-        <a href="classes/Users.html#method_createArrayList" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">635</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">createArrayList</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_createArrayListLiked">
-        createArrayListLiked()
-        <a href="classes/Users.html#method_createArrayListLiked" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">644</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-                <span class="phpdocumentor-signature__name">createArrayListLiked</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
     
     
 
@@ -1197,26 +869,25 @@ Automatic connection if cookie exist</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">566</span>
+    <span class="phpdocumentor-element-found-in__line">469</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Check if reset token has expired</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-                <span class="phpdocumentor-signature__name">checkForExpiringToken</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$time</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                <span class="phpdocumentor-signature__name">checkForExpiringToken</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$time</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$time</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
@@ -1224,6 +895,115 @@ Automatic connection if cookie exist</p>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createUserSession">
+        createUserSession()
+        <a href="classes/Users.html#method_createUserSession" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">500</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Create user session</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">createUserSession</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$user</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$user</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href=""><abbr title=""></abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_createUserToken">
+        createUserToken()
+        <a href="classes/Users.html#method_createUserToken" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">512</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Create user cookie logged</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">createUserToken</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_recoverUserToken">
+        recoverUserToken()
+        <a href="classes/Users.html#method_recoverUserToken" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/controllers/Users.php"><a href="files/app-controllers-users.html"><abbr title="app/controllers/Users.php">Users.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">520</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">If exist recover the cookie</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                <span class="phpdocumentor-signature__name">recoverUserToken</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
         
     
