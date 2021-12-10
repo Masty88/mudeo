@@ -73,39 +73,7 @@ class Medias extends Controller
             if ($_POST['category_id'] === "Chose type of media") {
                 $data['category_err'] = "please select a category";
             } else {
-                if ($_POST['category_id'] === "Feature Films") {
-                    $data['category_id'] = 1;
-                }
-                if ($_POST['category_id'] === "Short Films") {
-                    $data['category_id'] = 14;
-                }
-                if ($_POST['category_id'] === "Documentary") {
-                    $data['category_id'] = 20;
-                }
-                if ($_POST['category_id'] === "Commercials") {
-                    $data['category_id'] = 13;
-                }
-                if ($_POST['category_id'] === "VFX") {
-                    $data['category_id'] = 18;
-                }
-                if ($_POST['category_id'] === "Game Art Animation") {
-                    $data['category_id'] = 3;
-                }
-                if ($_POST['category_id'] === "Music Tracks") {
-                    $data['category_id'] = 2;
-                }
-                if ($_POST['category_id'] === "Music videos") {
-                    $data['category_id'] = 17;
-                }
-                if ($_POST['category_id'] === "Music Bases") {
-                    $data['category_id'] = 4;
-                }
-                if ($_POST['category_id'] === "Interviews") {
-                    $data['category_id'] = 10;
-                }
-                if ($_POST['category_id'] === "Others") {
-                    $data['category_id'] = 19;
-                }
+                $data['category_id']=$_POST['category_id'];
             }
 
             //Validate cover Image
@@ -363,39 +331,7 @@ class Medias extends Controller
                         if ($_POST['category_id'] === "Chose type of media") {
                             $data['category_err'] = "please select a category";
                         } else {
-                            if ($_POST['category_id'] === "Feature Films") {
-                                $data['category_id'] = 1;
-                            }
-                            if ($_POST['category_id'] === "Short Films") {
-                                $data['category_id'] = 14;
-                            }
-                            if ($_POST['category_id'] === "Documentary") {
-                                $data['category_id'] = 20;
-                            }
-                            if ($_POST['category_id'] === "Commercials") {
-                                $data['category_id'] = 13;
-                            }
-                            if ($_POST['category_id'] === "VFX") {
-                                $data['category_id'] = 18;
-                            }
-                            if ($_POST['category_id'] === "Game Art Animation") {
-                                $data['category_id'] = 3;
-                            }
-                            if ($_POST['category_id'] === "Music Tracks") {
-                                $data['category_id'] = 2;
-                            }
-                            if ($_POST['category_id'] === "Music videos") {
-                                $data['category_id'] = 17;
-                            }
-                            if ($_POST['category_id'] === "Music Bases") {
-                                $data['category_id'] = 4;
-                            }
-                            if ($_POST['category_id'] === "Interviews") {
-                                $data['category_id'] = 10;
-                            }
-                            if ($_POST['category_id'] === "Others") {
-                                $data['category_id'] = 19;
-                            }
+                            $data['category_id']=$_POST['category_id'];
                         }
 
                         //Validate cover Image

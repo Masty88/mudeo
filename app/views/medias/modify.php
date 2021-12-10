@@ -29,9 +29,7 @@
                                         <div class="field" id="body-group">
                                             <label class="label">Description</label>
                                             <div class="control has-icons-left has-icons-right">
-                                                <textarea class="textarea has-text-left" name="body" id="body-post" rows="10">
-                                                <?= $data['entity']->description; ?>
-                                                </textarea>
+                                                <textarea class="textarea has-text-left" name="body" id="body-post" rows="10"><?= $data['entity']->description; ?></textarea>
                                             </div>
                                             <span><?= $data['body_err'] ?></span>
                                         </div>
@@ -43,17 +41,18 @@
                                                 <div class="select">
                                                     <select name="category_id" class="<?php echo (!empty($data['category_err'])) ? 'is-danger' : '' ?>">
                                                         <option> Chose type of media </option>
-                                                        <option>Feature Films</option>
-                                                        <option> Short Films</option>
-                                                        <option>Documentary</option>
-                                                        <option>Commercials</option>
-                                                        <option>Interviews</option>
-                                                        <option>VFX</option>
-                                                        <option>Game Art Animation</option>
-                                                        <option>Music Tracks</option>
-                                                        <option>Music Bases</option>
-                                                        <option>Music Videos</option>
-                                                        <option>Others</option>
+                                                        <option> Chose type of media </option>
+                                                        <option value="1" >Feature Films</option>
+                                                        <option value="14"> Short Films</option>
+                                                        <option value="20">Documentary</option>
+                                                        <option value="13">Commercials</option>
+                                                        <option value="10">Interviews</option>
+                                                        <option value="18">VFX</option>
+                                                        <option value="3">Game Art Animation</option>
+                                                        <option value="2">Music Tracks</option>
+                                                        <option value="4">Music Bases</option>
+                                                        <option value="17">Music Videos</option>
+                                                        <option value="19">Others</option>
                                                     </select>
                                                 </div>
                                             </div>
