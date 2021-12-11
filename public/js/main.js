@@ -591,6 +591,7 @@ if (errorPage) {
 const video = document.getElementsByClassName("showVideo");
 const videoId = window.location.href;
 let intervalHandle = null;
+let items=[];
 
 if(video[0]){
     video[0].addEventListener("play", (event) => {
@@ -622,10 +623,11 @@ if(video[0]){
     const savePosition = (videoId, position) => {
         // fetch(url, {method: 'POST', body: {videoId, position}}) ...
         try {
-            localStorage.setItem("position", JSON.stringify({
+            localStorage.setItem("position" + videoId, JSON.stringify({
                 videoId,
                 position
             }));
+
         } catch (error) {}
     }
 
