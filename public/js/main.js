@@ -587,7 +587,8 @@ if (errorPage) {
 /**
  * Put video current time in local storage
  */
-/*---Remember Video Position---*/
+/*
+
 const video = document.getElementsByClassName("showVideo");
 let videoId = window.location.href;
 let intervalHandle = null;
@@ -636,3 +637,4 @@ if(video[0]){
     video[0].currentTime = result.position;
 
 }
+*/
